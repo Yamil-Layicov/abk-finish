@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Days+One&family=Poppins:wght@100;200;300;400;500;600;700;900&family=Raleway:wght@500;600;700;800&display=swap");
+
+.newsPageMainSection {
+  z-index: 1;
+  font-family: "Poppins", sans-serif;
+
+  .hedaerSection {
+    margin-top: 125px;
+    position: relative;
+    z-index: -1;
+
+    .img {
+      width: 100%;
+      height: 500px;
+      &::after {
+        content: "";
+        background-color: rgba(13, 12, 28, 0.237);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    h1 {
+      font-size: 55px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: white;
+      position: absolute;
+      top: 28vh;
+      left: 12%;
+      z-index: 1;
+      font-weight: bold;
+    }
+  }
+
+  .newsBoxes {
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    .boxes {
+      width: 1300px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+
+      .box {
+        background-color: #f4f4f4;
+        height: 630px;
+        position: relative;
+        .imgBox {
+          img {
+            height: 300px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+          }
+        }
+        .textBox {
+          padding: 40px 40px 0px 40px;
+          .date {
+            background-color: #29f0b4;
+            width: 130px;
+            text-align: center;
+            padding: 8px 0;
+            color: white;
+            font-size: 13px;
+            font-family: "Poppins", sans-serif;
+          }
+          .title {
+            font-size: 20px;
+            font-weight: 500;
+            font-family: "Poppins", sans-serif;
+            padding-top: 20px;
+          }
+          button {
+            border: none;
+            background-color: white;
+            font-size: 25px;
+            color: gray;
+            padding: 18px 22px 14px 22px;
+            margin-top: 20px;
+            transition: all 0.3s ease-in-out;
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+
+            &:hover {
+              background-color: #29f0b4;
+              cursor: pointer;
+              color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: "1300px") {
+  .newsPageMainSection {
+    .newsBoxes {
+      .boxes {
+        grid-template-columns: repeat(2, 2fr);
+      }
+    }
+  }
+}
+
+@media (max-width: 1050px) {
+  .newsPageMainSection {
+    padding-top: 90px;
+  }
+}
+
+@media (max-width: 900px) {
+  .newsPageMainSection {
+    .newsBoxes {
+      padding: 100px 15px;
+      .boxes {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 80px;
+        .box {
+          .textBox {
+            padding: 20px 20px 0px 20px;
+            .title {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .newsPageMainSection {
+    .hedaerSection {
+      margin-top: 0px;
+      h1 {
+        font-size: 45px;
+        left: 5%;
+      }
+
+      img {
+        object-fit: none !important;
+        height: 80vh !important;
+      }
+    }
+    .newsBoxes {
+      .boxes {
+        .box {
+          .textBox {
+            padding: 40px 20px 0px 20px;
+            .date {
+            }
+            .title {
+              font-size: 18px;
+            }
+            button {
+              left: 20px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}

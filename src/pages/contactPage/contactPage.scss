@@ -1,0 +1,233 @@
+.contactPage {
+  padding-bottom: 160px;
+  .hedaerSection {
+    margin-top: 125px;
+    position: relative;
+    z-index: -1;
+
+    .img {
+      width: 100%;
+      height: 500px;
+      &::after {
+        content: "";
+        background-color: rgba(13, 12, 28, 0.237);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+
+    h1 {
+      font-size: 55px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: white;
+      position: absolute;
+      top: 28vh;
+      left: 12%;
+      z-index: 1;
+      font-weight: bold;
+    }
+  }
+
+  .pageContent {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      color: #171151;
+      .box {
+        border: 1px solid rgba(128, 128, 128, 0.316);
+        padding: 60px 40px;
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          border: 1px solid rgb(11, 193, 11);
+        }
+
+        h3 {
+          font-family: "Archivo", sans-serif;
+          font-weight: 700;
+        }
+
+        p {
+          font-size: 21px;
+        }
+        .icon {
+          font-size: 54px;
+        }
+      }
+    }
+    .right {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        font-weight: bold;
+        color: #171151;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        .upInputs {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 35px;
+
+          .inputBox {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+            small{
+              position: absolute;
+              bottom: -22px;
+              left: 0;
+              color: red;
+            }
+            input {
+              width: 350px;
+              padding: 18px 18px 18px 20px;
+              outline: none;
+              border: 1px solid rgba(128, 128, 128, 0.529);
+              border-radius: 5px;
+
+              &:focus {
+                border: 1px solid #29f0b4;
+              }
+            }
+            .inputError{
+              border: 1px solid red;
+            }
+          }
+        }
+
+        textarea {
+          padding: 20px;
+          outline: none;
+          border: 1px solid rgba(128, 128, 128, 0.529);
+          border-radius: 5px;
+          margin-top: 10px;
+        }
+
+        button {
+          width: 200px;
+          background-color: #0e63ff;
+          border: none;
+          color: white;
+          font-weight: 500;
+          font-size: 22px;
+          padding: 18px 22px;
+          border-radius: 4px;
+          transition: all .3s ease-in-out;
+          border: 2px solid transparent;
+
+          &:hover{
+            background-color: white;
+            border: 2px  solid #0e63ff;
+            color: #0e63ff;
+          }
+
+          
+        }
+      }
+
+      iframe {
+        height: 60vh;
+        padding-top: 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .contactPage {
+    .pageContent {
+      flex-direction: column;
+      .right{
+        form{
+          .upInputs{
+            .inputBox{
+              input{
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contactPage {
+    .pageContent {
+      .right {
+        form {
+          .upInputs {
+            input {
+              padding: 18px 80px 18px 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .contactPage {
+    .hedaerSection {
+      margin-top: 90px;
+      img {
+        object-fit: none !important;
+        height: 80vh !important;
+      }
+      h1 {
+        font-size: 45px;
+        left: 5%;
+      }
+    }
+    .pageContent {
+      padding: 100px 20px 0 20px;
+      .right {
+        form {
+          .upInputs {
+            grid-template-columns: repeat(1, 1fr);
+            input {
+              padding: 18px 40px 18px 20px;
+            }
+          }
+        }
+        iframe {
+          height: 40vh;
+        }
+      }
+      .left {
+        .box {
+          padding: 40px 20px;
+        }
+      }
+    }
+  }
+}

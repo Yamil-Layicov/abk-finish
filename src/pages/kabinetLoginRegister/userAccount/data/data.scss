@@ -1,0 +1,144 @@
+.insideRightSide {
+    background-color: white;
+    width: 100%;
+    padding: 30px 50px;
+    border-radius: 13px;
+    .headerBox {
+      border-bottom: 1px solid gray;
+      padding-bottom: 10px;
+      span {
+        color: #9a9696;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+
+        &:last-child {
+          padding-left: 150px;
+        }
+      }
+    }
+    .bodyMainBox {
+      .bodyBox {
+        padding-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        .dateText {
+          span {
+            font-family: "Inter", sans-serif;
+          }
+          .date {
+            color: #9a9696;
+            font-weight: 500;
+          }
+          .text {
+            padding-left: 102px;
+            color: #231781;
+            font-weight: 600;
+          }
+        }
+        .buttons{
+          display: flex;
+          gap: 10px;
+          a, button {
+            border: none;
+            border-radius: 10px;
+            padding: calc(13px / 2) calc(31px / 2);
+            color: white;
+            font-size: 15px;
+            border: 1px solid transparent;
+            transition: all .3s ease-in-out;
+            text-decoration: none;
+            cursor: pointer;
+
+            
+
+            &:first-child{
+              background: #10d0a1;
+              &:hover{
+                color: black;
+                border: 1px solid #10d0a1;
+                background-color: transparent;
+              }
+            }
+            &:last-child{
+              background: red;
+              &:hover{
+                color: black;
+                border: 1px solid red;
+                background-color: transparent;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+
+    
+  }
+
+  @media(max-width:900px){
+    .insideRightSide{
+      width: 100% !important;
+      // padding: 10px;
+      .headerBox{
+        display: none;
+      }
+      .bodyMainBox{
+        .bodyBox{
+          gap: 10px;
+          .dateText{
+            // display: flex;
+            // flex-direction: column;
+            gap: 15px;
+  
+            // .text{
+            //   padding: 0;
+            // }
+            // span{
+            //   display: block;
+            // }
+          }
+          .buttons{
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width:600px){
+    .insideRightSide{
+      padding: 0;
+      background-color: #F4F4FA;
+      .bodyMainBox{
+        padding: 10px;
+        .bodyBox{
+          padding: 10px;
+          gap: 10px;
+          background-color: white;
+          border: 1px solid white;
+          border-radius: 14px;
+          margin: 10px 0;
+
+          .dateText{
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+  
+            .text{
+              padding: 0;
+            }
+            span{
+              display: block;
+            }
+          }
+          .buttons{
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }

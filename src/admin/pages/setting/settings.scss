@@ -1,0 +1,55 @@
+.adminSettings{
+    .intoSettings{
+        width: 100%;
+        height: 100%;
+        border-radius: 3px;
+        margin: 40px 0;
+
+        form{
+            border-radius: 5px;
+            background-color: #323c48;
+            display: flex;
+            flex-direction: column;
+            padding: 40px 120px;
+            gap: 20px;
+            input{
+                border: none;
+                outline: none;
+                border: 1px solid rgba(184, 184, 184, 0.575);
+                background-color: #323C48;
+                color: white;
+                border-radius: 3px;
+                padding: 6px 12px;
+            }
+
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .imageFile{
+                img{
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+
+            button{
+                background-color: #DAC0A3;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                padding: 12px;
+                font-size: 18px;
+                width: 180px;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    background-color: white;
+                    color: #DAC0A3;
+                }
+            }
+        }
+    }
+}

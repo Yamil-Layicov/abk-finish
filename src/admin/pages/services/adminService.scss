@@ -1,0 +1,100 @@
+.adminBloq {
+  .intoSettings {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    margin: 40px 0;
+
+    form {
+      border-radius: 5px;
+      background-color: #323c48;
+      display: flex;
+      flex-direction: column;
+      padding: 40px 120px;
+      gap: 20px;
+      input,
+      textarea {
+        border: none;
+        outline: none;
+        border: 1px solid rgba(184, 184, 184, 0.575);
+        background-color: #323c48;
+        color: white;
+        border-radius: 3px;
+        padding: 6px 12px;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .imageFile {
+        .inputBox {
+          &:nth-child(1) {
+            width: 200px;
+            label {
+              cursor: pointer;
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+            }
+            input {
+              display: none;
+            }
+          }
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+
+      button {
+        background-color: #dac0a3;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        padding: 12px;
+        font-size: 18px;
+        width: 180px;
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          background-color: white;
+          color: #dac0a3;
+        }
+      }
+    }
+  }
+
+  .tableContent {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    .createNewBtn{
+      padding-bottom: 7px;
+      button{
+        padding: 4px 6px;
+      }
+    }
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+
+      td,
+      th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+      }
+      button{
+        padding: 4px 8px;
+        margin: 0 1px;
+        font-size: 20px;
+      }
+    }
+  }
+}

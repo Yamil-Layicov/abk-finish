@@ -1,0 +1,218 @@
+.whyChooseUs {
+  background-color: #171151;
+  color: white;
+  padding: 120px 180px;
+
+  .headerText {
+    text-align: center;
+
+    h1 {
+      font-size: 50px;
+      line-height: 1.2;
+      font-weight: 700;
+      font-family: "Archivo", sans-serif;;
+      color: white;
+      padding: 20px 0 60px 0;
+    }
+
+    h6 {
+      color: #0e63ff;
+      font-weight: 700;
+      font-size: 15px;
+    }
+  }
+
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: dense;
+    gap: 100px;
+
+    .box {
+      position: relative;
+      margin-bottom: 40px;
+
+
+      .labIcon {
+        padding-bottom: 40px;
+        span {
+          font-size: 40px;
+          padding: 40px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 120px;
+          border-radius: 50%;
+          position: relative;
+          z-index: 1;
+          transition: all .4s ease-in-out;
+          
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            opacity: 0;
+            scale: 0;
+            z-index: -1;
+            transition: all .4s ease-in-out;
+          }
+        }
+      }
+
+      h3{
+        font-family: "Archivo", sans-serif;
+        font-size: 25px;
+        font-weight: 700;
+      }
+
+      p {
+        padding-top: 20px;
+        
+      }
+    }
+
+    .box:nth-child(1) {
+      .labIcon {
+        span{
+          color: #42bfff;
+          background-color: #42c0ff2f;
+
+          &::after{
+            background-color: #42bfff;
+          }
+        }
+      }
+
+      &:hover{
+        .labIcon{
+          span{
+            color: white;
+  
+            &::after{
+              opacity: 1;
+              scale: 1;
+            }
+          }
+        }
+      }
+    }
+    .box:nth-child(2) {
+      .labIcon {
+        span{
+          color: #f72a75;
+          background-color: #f72a753c;
+
+          &::after{
+            background-color: #f72a75;
+          }
+        }
+      }
+
+      &:hover{
+        .labIcon{
+          span{
+            color: white;
+  
+            &::after{
+              opacity: 1;
+              scale: 1;
+            }
+          }
+        }
+      }
+    }
+    .box:nth-child(3) {
+      .labIcon {
+        span{
+          color: #10d0a1;
+          background-color: #10d0a037;
+
+          &::after{
+            background-color: #10d0a1;
+          }
+        }
+      }
+
+      &:hover{
+        .labIcon{
+          span{
+            color: white;
+  
+            &::after{
+              opacity: 1;
+              scale: 1;
+            }
+          }
+        }
+      }
+    }
+    .box:nth-child(4) {
+      .labIcon {
+        span{
+          color: #0e63ff;
+          background-color: #0e62ff3a;
+
+          &::after{
+            background-color: #0e63ff;
+          }
+        }
+      }
+
+      &:hover{
+        .labIcon{
+          span{
+            color: white;
+  
+            &::after{
+              opacity: 1;
+              scale: 1;
+            }
+          }
+        }
+      }
+    }
+    
+  }
+}
+
+
+
+@media (max-width:1500px) {
+  .whyChooseUs{
+    padding: 120px 120px;
+    .boxes{
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width:1200px) {
+  .whyChooseUs{
+    .boxes{
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+    }
+  }
+}
+
+@media (max-width:800px) {
+  .whyChooseUs{
+    padding: 100px 20px;
+    .boxes{
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+     
+    }
+
+    .headerText{
+      h1{
+        font-size: 30px;
+      }
+    }
+  }
+}

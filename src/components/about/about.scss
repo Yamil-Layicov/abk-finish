@@ -1,0 +1,215 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  gap: 150px;
+  padding: 0 130px;
+
+  .imgContainer {
+    .img {
+      position: relative;
+      // .experienceBox {
+      //   position: absolute;
+      //   bottom: -100px;
+      //   left: 140px;
+      //   background-color: #10d0a1;
+      //   width: 300px;
+      //   height: 300px;
+      //   border-radius: 50%;
+      //   font-size: 26px;
+      //   color: white;
+      //   font-weight: 500;
+      //   display: flex;
+      //   flex-direction: column;
+      //   gap: 0;
+      //   align-items: center;
+      //   padding-top: 45px;
+
+      //   .spanNum {
+      //     font-size: 125px;
+      //     font-family: "Days One", sans-serif;
+      //     line-height: 100px;
+      //   }
+
+      //   .spanTexts{
+      //     padding-top: 20px;
+      //   }
+
+      //   .spanText1{
+      //     padding-left: 25px;
+      //   }
+      //   .spanText2{
+      //     padding-left: 4px;
+      //   }
+      // }
+      img {
+        border-radius: 0 0 362px 341px;
+      }
+    }
+  }
+
+  .textContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h6 {
+      color: #0e63ff;
+      font-weight: 700;
+      font-size: 15px;
+      padding-top: 60px;
+    }
+
+    h1 {
+      font-size: 40px;
+      line-height: 1.2;
+      font-weight: 500;
+    }
+
+    .first {
+      padding-right: 140px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #171151;
+    }
+
+    .second {
+      padding-right: 200px;
+    }
+
+    button {
+      width: 200px;
+      background-color: #10d0a1;
+      color: white;
+      font-weight: 700;
+      border: none;
+      border-radius: 3px;
+      padding: 18px 40px;
+      font-size: 21px;
+      border: 2px solid transparent;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+        background-color: transparent;
+        border: 2px solid #10d0a1;
+        color: #10d0a1;
+      }
+    }
+  }
+}
+
+
+@media(max-width:1500px){
+  .about{
+    padding: 50px;
+  }
+}
+
+@media(max-width:1400px){
+  .about{
+    gap: 60px;
+    .textContainer{
+      .first{
+        padding: 0;
+      }
+      .second{
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media(max-width:1200px){
+  .about{
+    padding: 0 120px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .textContainer{
+      padding-top: 150px;
+
+      h1{
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+@media(max-width:800px){
+  .about{
+    padding: 0 40px;
+    .imgContainer{
+      
+      .img{
+        img{
+          width: 500px;
+        }
+      }
+
+      .experienceBox {
+        position: absolute;
+        bottom: -100px;
+        left: 150px !important;
+        background-color: #10d0a1;
+        width: 200px !important;
+        height: 200px !important;
+        border-radius: 50%;
+        font-size: 17px !important;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+        padding-top: 5px !important;
+
+        .spanNum {
+          font-size: 75px !important;
+          font-family: "Days One", sans-serif;
+          line-height: 120px;
+          padding: 0 !important;
+        }
+
+        .spanTexts{
+          padding: 0 !important;
+          position: absolute;
+          top: 110px;
+          left: 60px;
+        }
+      }
+    }
+
+    .textContainer{
+      padding-top: 150px;
+
+      h6{
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+@media(max-width:500px){
+  .about{
+    padding: 0 20px;
+    .imgContainer{
+      .experienceBox{
+        left: 80px !important;
+
+        .spanNum{
+          line-height: 120px !important;
+        }
+      }
+      .img{
+        img{
+         width: 360px;
+        }
+      }
+
+      
+    }
+    .textContainer{
+      padding-top: 10px;
+    }
+  }
+}

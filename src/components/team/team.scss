@@ -1,0 +1,150 @@
+.team {
+    background-image: url("../../assets/servicesBg.png");
+    background-color: #f2f5fa;
+    padding: 140px 140px;
+    .galleryHeader {
+  
+      h1{
+        font-size: 40px;
+        line-height: 1.2;
+        font-weight: 500;
+        color: #171151;
+        padding-top: 20px;
+      }
+  
+      h6 {
+        color: #0e63ff;
+        font-weight: 700;
+        font-size: 15px;
+      }
+    }
+  
+    .carousel {
+      cursor: grab;
+      overflow: hidden;
+      padding: 60px 0;
+      .inner-carousel {
+        display: flex;
+        .item {
+          min-width: 440px;
+          position: relative;
+          background-color: rgb(255, 255, 255);
+          border-radius: 5px;
+          margin: 0 18px;
+          overflow: hidden;
+
+          &:nth-child(1){
+            margin-right: 18px;
+          }
+
+          &:last-child{
+            margin-left: 18px;
+          }
+  
+          img {
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            object-fit: cover;
+            height: 400px;
+            border-radius: 5px;
+            transition: all .4s ease-in-out;
+          }
+
+          .deatilSpecialist{
+            padding: 40px;
+            font-size: 24px;
+           
+            h3{
+              font-family: "Archivo", sans-serif;
+                color:rgb(23, 17, 81) ;
+                position: relative;
+                font-weight: 700;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0%;
+                    height: 1px;
+                    background-color:rgb(23, 17, 81) ; 
+                    transition: all .5s ease-in-out;
+                }
+            }
+
+            
+
+            h6{
+                color: rgb(14, 99, 255);
+                font-size: 20px;
+                font-weight: 500;
+                padding-top: 15px;
+            }
+          }
+
+          &:hover{
+            h3{
+                &::after{
+                    width: 70%;
+                }
+            }
+
+            img {
+                transform: scale(1.1);
+              }
+        }
+        }
+        
+      }
+    }
+    
+  }
+  
+  @media (max-width: 1200px) {
+    .team {
+        padding: 100px 40px !important;
+      .carousel{}
+      .item{
+        min-width: calc(100% / 3) !important;
+      }
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .team {
+      .carousel{}
+      .item{
+        min-width: calc(100% / 2) !important;
+      }
+    }
+  }
+  
+  
+  
+  @media (max-width: 800px) {
+    .team {
+      padding: 120px 10px !important;
+      .carousel {
+        padding: 50px 0;  
+        .inner-carousel {
+          padding: 0 !important;
+        }
+        .item {
+          min-width: 100% !important;
+  
+          img {
+            object-fit: cover;
+          }
+        }
+      }
+      
+      .galleryHeader{
+        h1{
+          font-size: 35px !important;
+        }
+      }
+      
+    }
+  }
+  

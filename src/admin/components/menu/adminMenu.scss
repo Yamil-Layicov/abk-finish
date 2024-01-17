@@ -1,0 +1,41 @@
+// BG
+$main-bg: #2a3447;
+$soft-bg: #384256;
+$dark-bg: #222b3c;
+//TEXT
+$main-color: white;
+$soft-color: #ddd;
+$dark-color: #2a3447;
+
+
+.adminMenu{
+    min-height: 100vh;
+    .item{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .title{
+            font-size: 12px;
+            font-weight: 200;
+            color: $soft-color;
+            text-transform: uppercase;
+            }
+
+            .listItem{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                border-radius: 5px;
+                transition: all .2s ease-in-out;
+                text-decoration: none;
+                color: white;
+
+                &:hover{
+                    background-color: $soft-bg;
+                }
+        }
+    }
+}

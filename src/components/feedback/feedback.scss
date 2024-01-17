@@ -1,0 +1,157 @@
+.feedback {
+    background-color: #f2f5fa;
+    position: relative;
+    padding-top: 250px;
+    background-image: url('../../assets/servicesBg.png');
+    .galleryHeader {
+        text-align: center;
+        background-image: url("https://bioxlab-next-js.vercel.app/assets/img/shape/shape-bg-02.png");
+        padding: 140px 0 220px 0;
+        position: absolute;
+        width: 100%;
+        top: -50px;
+        left: 0;
+      h1{
+        font-size: 50px;
+        line-height: 1.2;
+        font-weight: 700;
+        font-family: "Archivo", sans-serif;
+        color: white;
+        padding-top: 20px;
+      }
+  
+      h6 {
+        color: white;
+        font-weight: 700;
+        font-size: 15px;
+      }
+    }
+  
+    .carousel {
+      cursor: grab;
+      overflow: hidden;
+      width: 1400px;
+      margin: auto;
+      padding: 40px 0 150px 0;
+      .inner-carousel {
+        display: flex;
+        gap: 30px;
+        .item {
+          min-width: 440px;
+          height: 400px;
+          position: relative;
+          background-color: rgb(255, 255, 255);
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          padding: 0 50px;
+  
+          img {
+            width: 100px;
+            height: 100px;
+            pointer-events: none;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all .4s ease-in-out;
+          }
+
+          p{
+            color: #8a879f;
+            font-size: 15px;
+            padding-top: 40px;
+          }
+          .deatilSpecialist{
+            padding: 40px;
+            font-size: 24px;
+           
+            h3{
+              font-family: "Archivo", sans-serif;
+                color:rgb(23, 17, 81) ;
+                position: relative;
+                font-size: 20px;
+                font-weight: 700;
+            }
+
+            h6{
+                color: rgb(14, 99, 255);
+                font-size: 16px;
+                font-weight: 500;
+                padding-top: 15px;
+            }
+          }
+        }
+        
+      }
+    }
+    
+  }
+
+  @media (max-width:1400px) {
+    .feedback{
+      .carousel{
+        width: 1140px;
+        .item{
+          min-width: 540px !important;
+
+          .deatilSpecialist{
+            padding: 40px 0 !important;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    .feedback {
+      .carousel{
+        width: 1000px;
+        .item{
+          min-width: 490px !important;
+        }
+      }
+      
+    }
+  }
+  
+  @media (max-width: 1000px) {
+    .feedback {
+      padding-bottom: 100px;
+      .carousel{
+        width: 100% !important;
+        padding: 0 40px;
+        .item{
+          min-width: calc(100% / 2) !important;
+        }
+      }
+     
+    }
+  }
+  
+  @media (max-width: 800px) {
+    .feedback {
+      padding-bottom: 100px;
+      .carousel{
+        width: 100% !important;
+        padding: 0 !important;
+        .inner-carousel{
+          padding: 0 30px;
+          .item{
+            min-width: 100% !important;
+          }
+        }
+       
+        
+      }
+     .galleryHeader{
+      h1{
+        font-size: 35px;
+      }
+     }
+    }
+  }
+  
+  
+  

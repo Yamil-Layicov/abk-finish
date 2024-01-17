@@ -1,0 +1,292 @@
+.mainRegister {
+  width: 100%;
+  background-color: white;
+
+  .headerBox {
+    height: 30px;
+  }
+
+  .register {
+    background-color: #f4f4fa;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 30px);
+    .intoRegister {
+      width: calc(430px);
+      background-color: white;
+      border-radius: 16px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      p {
+        font-family: "Inter", sans-serif;
+      }
+      .updatedText{
+        color: #C2C2C2;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .inputBox {
+          position: relative;
+          input {
+            padding: 10px;
+            outline: none;
+            border-radius: 10px;
+            font-weight: 500;
+            border: 1px solid #9a9696;
+            width: 100%;
+            font-size: 16px;
+          }
+          small {
+            color: red;
+            position: absolute;
+            bottom: -20px;
+            left: 5px;
+            font-size: 12px;
+          }
+          .inputError {
+            border: 1px solid red !important;
+          }
+          .inputEyes {
+            position: absolute;
+            top: 6px;
+            right: 20px;
+            color: #9a9696;
+            font-size: 22px;
+            cursor: pointer;
+          }
+        }
+
+        button {
+          border-radius: 16px;
+          border: 1px solid #10d0a1;
+          background: #10d0a1;
+          color: #fff;
+          font-family: "Inter", sans-serif;
+          font-size: 18px;
+          font-weight: 600;
+          padding: 12px 0;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+        .forgotBox {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          span {
+            cursor: pointer;
+          }
+          .saveBox {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 15px;
+
+            .textSave {
+              font-size: 14px;
+              color: #9a9696;
+              font-weight: 600;
+              font-family: "Inter", sans-serif;
+            }
+
+            .checkMark {
+              width: 20px;
+              height: 20px;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+              svg {
+                width: 14px;
+                height: 14px;
+              }
+            }
+          }
+          .text {
+            font-size: 14px;
+            color: #356fc6;
+            font-weight: 500;
+            font-family: "Inter", sans-serif;
+          }
+        }
+        .verificBtns {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .box {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #9a9696;
+            border-radius: 7px;
+          }
+        }
+      }
+      h3 {
+        font-family: "Inter", sans-serif;
+        font-size: 20px;
+        font-weight: 500;
+        color: #231781;
+        text-align: center;
+        padding-bottom: 16px;
+      }
+      .accaountText {
+        text-align: center;
+        font-weight: 600;
+        font-family: "Inter", sans-serif;
+        span {
+          color: #356fc6;
+          padding-left: 5px;
+          transition: all 0.3s ease-in-out;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .headerBox {
+      height: 0px;
+    }
+    .register {
+      background-color: transparent;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: normal;
+      width: 100%;
+      .intoRegister {
+        border-radius: 0;
+        padding: 16px;
+        width: 100%;
+        h3 {
+          text-align: left;
+          padding-top: 40px;
+          font-size: 22px;
+        }
+        form {
+          .inputBox {
+            input {
+              padding: 16px;
+              border-radius: 10px;
+              font-size: 20px;
+            }
+            .inputEyes {
+              top: 15px;
+              right: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1750px) {
+    .headerBox {
+      height: 70px;
+    }
+    .register {
+      .intoRegister {
+        border-radius: 0;
+        padding: 0 120px;
+        width: 970px;
+        border-radius: 16px;
+        h3 {
+          font-size: 32px;
+          font-weight: 500;
+          line-height: normal;
+          padding: 50px 0;
+        }
+        form {
+          gap: 40px;
+          .inputBox {
+            input {
+              padding: 22px;
+              border-radius: 16px;
+              font-size: 32px;
+            }
+            small {
+              bottom: -30px;
+              left: 5px;
+              font-size: 22px;
+            }
+            .inputEyes {
+              top: 20px;
+              right: 35px;
+              font-size: 35px;
+            }
+          }
+          button {
+            font-size: 32px;
+            padding: 22px 0;
+          }
+          .otherBtns{
+            margin-bottom: 60px;
+          }
+          .forgotBox {
+            .saveBox {
+              gap: 25px;
+              .checkMark {
+                width: 32px;
+                height: 32px;
+                border-radius: 10px;
+                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+                svg {
+                  width: 22px;
+                  height: 22px;
+                }
+              }
+              .textSave{
+                font-size: 30px;
+              }
+             
+            }
+            .text{
+              font-size: 24px;
+            }
+          }
+          .verificBtns{
+            .box{
+              width: 90px;
+              height: 100px;
+              font-size: 22px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              input{
+                display: flex;
+              justify-content: center;
+              align-items: center;
+              }
+            }
+          }
+        }
+        .accaountText {
+          font-size: 32px;
+          padding: 50px 0;
+          span {
+            color: #356fc6;
+            padding-left: 10px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+          }
+        }
+        .updatedText{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+}

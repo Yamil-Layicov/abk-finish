@@ -1,0 +1,317 @@
+.servicePageMain {
+  padding-bottom: 160px;
+  .hedaerSection {
+    margin-top: 125px;
+    position: relative;
+    z-index: -1;
+
+    .img {
+      width: 100%;
+      height: 500px;
+      &::after {
+        content: "";
+        background-color: rgba(13, 12, 28, 0.237);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+
+    h1 {
+      font-size: 55px;
+      line-height: 1.2;
+      font-weight: 500;
+      color: white;
+      position: absolute;
+      top: 28vh;
+      left: 12%;
+      z-index: 1;
+      font-weight: bold;
+    }
+  }
+
+  .centerSection {
+    background-image: url("../../assets/servicesBg.png");
+
+    .textHeader {
+      text-align: center;
+      padding: 100px 0;
+
+      h5 {
+        color: #0e63ff;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+      }
+      h1 {
+        color: #171151;
+        font-size: 45px;
+        padding-top: 10px;
+        font-family: "Archivo", sans-serif;
+        font-weight: 700;
+      }
+    }
+
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      padding: 0 150px;
+      gap: 50px;
+
+      .box {
+        display: inline-block;
+        background-color: white;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        position: relative;
+
+        .intoBox {
+          display: flex;
+          flex-direction: column;
+          align-items: start;
+          gap: 20px;
+          padding: 40px 40px 80px 40px;
+          position: relative;
+          cursor: pointer;
+
+          .labTitle {
+            font-size: 24px;
+            color: #171151;
+            font-weight: 800;
+            padding: 10px 0;
+          }
+
+          .labIcon {
+            background-color: rgb(245, 245, 245);
+            transition: all 0.3s ease-in-out;
+            padding: 30px;
+            width: 120px;
+            height: 120px;
+            clip-path: polygon(
+              45% 1.33975%,
+              46.5798% 0.60307%,
+              48.26352% 0.15192%,
+              50% 0,
+              51.73648% 0.15192%,
+              53.4202% 0.60307%,
+              55% 1.33975%,
+              89.64102% 21.33975%,
+              91.06889% 22.33956%,
+              92.30146% 23.57212%,
+              93.30127% 25%,
+              94.03794% 26.5798%,
+              94.48909% 28.26352%,
+              94.64102% 30%,
+              94.64102% 70%,
+              94.48909% 71.73648%,
+              94.03794% 73.4202%,
+              93.30127% 75%,
+              92.30146% 76.42788%,
+              91.06889% 77.66044%,
+              89.64102% 78.66025%,
+              55% 98.66025%,
+              53.4202% 99.39693%,
+              51.73648% 99.84808%,
+              50% 100%,
+              48.26352% 99.84808%,
+              46.5798% 99.39693%,
+              45% 98.66025%,
+              10.35898% 78.66025%,
+              8.93111% 77.66044%,
+              7.69854% 76.42788%,
+              6.69873% 75%,
+              5.96206% 73.4202%,
+              5.51091% 71.73648%,
+              5.35898% 70%,
+              5.35898% 30%,
+              5.51091% 28.26352%,
+              5.96206% 26.5798%,
+              6.69873% 25%,
+              7.69854% 23.57212%,
+              8.93111% 22.33956%,
+              10.35898% 21.33975%
+            );
+          }
+
+          .labDesc {
+            line-height: 26px;
+            font-family: "Archivo", sans-serif;
+            white-space: normal;
+          }
+        }
+
+        .readMore {
+          display: flex;
+          gap: 10px;
+          padding-top: 20px;
+          position: absolute;
+          bottom: 30px;
+          left: 40px;
+          cursor: pointer;
+          
+          span {
+            font-size: 14px;
+            font-weight: 700;
+
+            &:first-child {
+              background-color: rgb(245, 245, 245);
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              transition: all .5s;
+              clip-path: polygon(
+                45% 1.33975%,
+                46.5798% 0.60307%,
+                48.26352% 0.15192%,
+                50% 0,
+                51.73648% 0.15192%,
+                53.4202% 0.60307%,
+                55% 1.33975%,
+                89.64102% 21.33975%,
+                91.06889% 22.33956%,
+                92.30146% 23.57212%,
+                93.30127% 25%,
+                94.03794% 26.5798%,
+                94.48909% 28.26352%,
+                94.64102% 30%,
+                94.64102% 70%,
+                94.48909% 71.73648%,
+                94.03794% 73.4202%,
+                93.30127% 75%,
+                92.30146% 76.42788%,
+                91.06889% 77.66044%,
+                89.64102% 78.66025%,
+                55% 98.66025%,
+                53.4202% 99.39693%,
+                51.73648% 99.84808%,
+                50% 100%,
+                48.26352% 99.84808%,
+                46.5798% 99.39693%,
+                45% 98.66025%,
+                10.35898% 78.66025%,
+                8.93111% 77.66044%,
+                7.69854% 76.42788%,
+                6.69873% 75%,
+                5.96206% 73.4202%,
+                5.51091% 71.73648%,
+                5.35898% 70%,
+                5.35898% 30%,
+                5.51091% 28.26352%,
+                5.96206% 26.5798%,
+                6.69873% 25%,
+                7.69854% 23.57212%,
+                8.93111% 22.33956%,
+                10.35898% 21.33975%
+              );
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .servicePageMain {
+    .centerSection {
+      .boxes {
+        padding: 0 60px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .servicePageMain {
+    .centerSection {
+      .boxes {
+        grid-template-columns: repeat(2, 1fr);
+        .box {
+          .intoBox {
+            .labTitle {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// @media (max-width: 1200px) {
+//   .servicePage {
+//     .centerSection {
+//       .boxes {
+//         padding: 0 60px;
+//         .box {
+//           .intoBox {
+//             .labTitle {
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+@media (max-width: 1000px) {
+  .servicePageMain {
+    .centerSection {
+      .boxes {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 20px;
+        gap: 20px;
+        .box {
+          .intoBox {
+            
+            .labTitle {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .servicePageMain {
+    .centerSection {
+      .boxes {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 0 15px;
+        gap: 20px;
+        .box {
+          .intoBox {
+            .labTitle {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width:600px) {
+  .servicePageMain{
+    .hedaerSection{
+      margin-top: 90px;
+      img{
+        object-fit: none !important;
+        height: 80vh !important;
+      }
+      h1{
+        font-size: 45px;
+        left: 5%;
+      }
+    }
+  }
+}
