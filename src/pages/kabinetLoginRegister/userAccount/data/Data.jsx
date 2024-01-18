@@ -6,11 +6,11 @@ const Data = ({ posts }) => {
 
   const handleDelete = (postId) => {
     api.delete(`analyses/${postId}`)
-      .then(response => {
+      .then(() => {
         window.location.reload();
       })
-      .catch(error => {
-       toast.error('Error deleting:');
+      .catch((error) => {
+       toast.error('Error deleting:',error);
       });
   }
 

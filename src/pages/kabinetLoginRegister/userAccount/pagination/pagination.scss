@@ -1,3 +1,6 @@
 .paginationConatiner{
     z-index: 1;
+    .active-page{
+        color: red;
+    }
 }
