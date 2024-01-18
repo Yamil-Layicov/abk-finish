@@ -7,6 +7,7 @@ import EditPasswordModal from "./editPasswordModal/EditPasswordModal";
 import { useAuth2 } from "../../../context/AuthContext2";
 import MainAnalaysesBox from "./mainAnalysesBox/MainAnalaysesBox";
 import { MdMenu } from "react-icons/md";
+import api from '../../../admin/api/posts';
 
 
 const UserAccountLayout = () => {
@@ -37,16 +38,17 @@ const UserAccountLayout = () => {
     setShowEditpassword(false);
   };
 
-  const exitUserAccount = () => {
-    navigate("/account");
-    setUser2(false);
+  const exitUserAccount = async () => {
+    const exitRes = await api.post("logout")
+    if(exitRes){
+      navigate("/account");
+      setUser2(false);
+    }
   };
 
   const toggleMenu = () => {
     setShowMenu(!showMenu)
-  
   }
-
 
 
   const handleChangeAnalyses = ({ field, value }) => {
@@ -58,6 +60,8 @@ const UserAccountLayout = () => {
     setSearchParams(searchParams, { replace: true });
   };
 
+  const data = JSON.parse(localStorage.getItem('user2'));
+  const isDoctor = data?.user?.is_doctor
 
   return (
     <div className="userAccount">
@@ -198,7 +202,7 @@ const UserAccountLayout = () => {
           </div>
         </div>
         <div className="rightSide">
-          <div className="rightHeader">
+        <div className="rightHeader">
             {location.pathname === "/userAccount/addAnalysis" ? (
               <Link style={{ textDecoration: "none" }} className="mb-4" to="">
                 <button className="addanalyseBtn">Geri</button>
@@ -206,9 +210,7 @@ const UserAccountLayout = () => {
             ) : (
               <h5>Analiz nəticələri </h5>
             )}
-            {location.pathname === "/userAccount/addAnalysis" ? (
-              " "
-            ) : (
+            {isDoctor === 1 && location.pathname !== "/userAccount/addAnalysis" && (
               <Link to="addAnalysis">
                 <button className="addanalyseBtn">Əlavə et</button>
               </Link>

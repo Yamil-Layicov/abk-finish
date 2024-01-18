@@ -27,6 +27,7 @@ const Data = ({ posts }) => {
               <div className="dateText">
                 <span className="date">{new Date().toLocaleDateString()}</span>
                 <span className="text">{post?.name}</span>
+                <span className="text">{post?.user?.full_name}</span>
               </div>
               <div className="buttons">
                 <a href={post?.file} rel="noreferrer" target="_blank">

@@ -10,5 +10,5 @@ const instance = axios.create({
     'Authorization': `Bearer ${data?.token}`,  
   }
 });
-
+  
 export default instance;

@@ -8,10 +8,8 @@ import { useSearchParams } from "react-router-dom";
 const MainRightSide = () => {
   const [loding, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [searchParams, setSearchParams] = useSearchParams();
-  // const [categories, setCategories] = useState([])
-  // const [currentPage, setCurrentPage] = useState(1);
-  // const [postsPerPage] = useState(8);
+  const [searchParams] = useSearchParams();
+ 
 
   let category = searchParams.get('category') || '';
   let page = searchParams.get('page') || '';
@@ -20,9 +18,7 @@ const MainRightSide = () => {
     const fetchPosts = async () => {
       setLoading(true);
       const res = await api.get(`analyses?category=${category}&page=${page}`);
-      
       setPosts(res?.data);
-      console.log("response",res?.data)
       setLoading(false);
     };
 
@@ -33,12 +29,6 @@ const MainRightSide = () => {
  if(loding){
   return <div>Loding...</div>
  }
-
-
-  // const indexOfLastPost = currentPage * postsPerPage;
-  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  // const currentPosts = posts?.data?.slice(indexOfFirstPost, indexOfLastPost);
-
 
   return (
     <div style={{display:'flex', flexDirection:"column", alignItems:"center", width:"100%", gap:"20px"}}>
