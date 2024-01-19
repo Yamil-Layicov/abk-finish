@@ -12,9 +12,13 @@
         font-weight: 500;
         font-size: 16px;
 
-        &:last-child {
-          padding-left: 150px;
-        }
+        
+      }
+      .secondSpan {
+        padding-left: 145px;
+      }
+      .thirdSpan{
+        padding-left: 135px;
       }
     }
     .bodyMainBox {
@@ -36,6 +40,13 @@
             padding-left: 102px;
             color: #231781;
             font-weight: 600;
+            display: inline-block;
+            width: 300px;
+
+          }
+          .text2 {
+            color: #231781;
+            font-weight: 600;
           }
         }
         .buttons{
@@ -54,21 +65,22 @@
 
             
 
-            &:first-child{
-              background: #10d0a1;
-              &:hover{
-                color: black;
-                border: 1px solid #10d0a1;
-                background-color: transparent;
-              }
+            
+          }
+          .dowBtn{
+            background: #10d0a1;
+            &:hover{
+              color: black;
+              border: 1px solid #10d0a1;
+              background-color: transparent;
             }
-            &:last-child{
-              background: red;
-              &:hover{
-                color: black;
-                border: 1px solid red;
-                background-color: transparent;
-              }
+          }
+         .delBtn{
+            background: red;
+            &:hover{
+              color: black;
+              border: 1px solid red;
+              background-color: transparent;
             }
           }
         }
@@ -79,12 +91,36 @@
     
   }
 
+  @media(max-width:1000px){
+    .insideRightSide{
+      .headerBox{
+          .secondSpan{
+            padding-left: 100px;
+          }
+          .thirdSpan{
+            padding-left: 76px;
+          }
+      }
+      .bodyMainBox{
+        .bodyBox{
+          .dateText{
+            .text{
+              padding-left: 52px;
+              width: 200px; 
+            }
+          }
+          .buttons{
+          }
+        }
+      }
+    }
+  }
+
   @media(max-width:900px){
     .insideRightSide{
       width: 100% !important;
       // padding: 10px;
       .headerBox{
-        display: none;
       }
       .bodyMainBox{
         .bodyBox{
@@ -113,6 +149,9 @@
     .insideRightSide{
       padding: 0;
       background-color: #F4F4FA;
+      .headerBox{
+        display: none ;
+      }
       .bodyMainBox{
         padding: 10px;
         .bodyBox{

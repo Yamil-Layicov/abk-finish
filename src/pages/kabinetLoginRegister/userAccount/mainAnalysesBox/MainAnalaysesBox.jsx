@@ -1,11 +1,24 @@
 import { useSearchParams } from 'react-router-dom';
 import api from '../../../../admin/api/posts';
 import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState, useLayoutEffect } from 'react';
 
 const MainAnalysesBox = () => {
   const [searchParams, setSearchParams] = useSearchParams();
+  const [analizData, setAnalizData] = useState('')
 
   let analizNames = searchParams.get('category')?.split(",")||[] ;
+
+
+  useLayoutEffect(() => {
+    const fetchPosts = async () => {
+      const res = await api.get(`analyses`);
+      setAnalizData(res?.data?.data.length);
+    };
+
+    fetchPosts();
+  }, []);
+
 
   const { data: analyses } = useQuery({
     queryFn: () => api.get('analyses-categories'),
@@ -30,9 +43,10 @@ const MainAnalysesBox = () => {
   };
 
   
+  
   return (
     <div className="analysisBox">
-      <div className="analsisName">
+      {analizData > 0 && <div className="analsisName">
         <ul>
           {analyses?.data?.map(({id,name}) => (
             <li
@@ -62,7 +76,7 @@ const MainAnalysesBox = () => {
             </li>
           ))}
         </ul>
-      </div>
+      </div>}
     </div>
   );
 };

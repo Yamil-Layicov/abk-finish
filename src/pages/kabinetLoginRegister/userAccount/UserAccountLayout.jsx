@@ -1,21 +1,26 @@
 import { useState, lazy, Suspense } from "react";
 import "./userAccountLayout.scss";
-import { Link, Outlet, useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import {
+  Link,
+  Outlet,
+  useLocation,
+  useNavigate,
+  useSearchParams,
+} from "react-router-dom";
 const EditUserModal = lazy(() => import("./editUserModal/EditUserModal"));
 import { MdKey } from "react-icons/md";
 import EditPasswordModal from "./editPasswordModal/EditPasswordModal";
 import { useAuth2 } from "../../../context/AuthContext2";
 import MainAnalaysesBox from "./mainAnalysesBox/MainAnalaysesBox";
 import { MdMenu } from "react-icons/md";
-import api from '../../../admin/api/posts';
-
+import { IoMdClose } from "react-icons/io";
+import api from "../../../admin/api/posts";
 
 const UserAccountLayout = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [showModalUser, setShowModalUser] = useState(false);
   const [showEditPassword, setShowEditpassword] = useState(false);
-  const [showMenu, setShowMenu] = useState(true)
- 
+  const [showMenu, setShowMenu] = useState(true);
 
   const navigate = useNavigate();
   const { setUser2, user2 } = useAuth2();
@@ -39,17 +44,16 @@ const UserAccountLayout = () => {
   };
 
   const exitUserAccount = async () => {
-    const exitRes = await api.post("logout")
-    if(exitRes){
+    const exitRes = await api.post("logout");
+    if (exitRes) {
       navigate("/account");
       setUser2(false);
     }
   };
 
   const toggleMenu = () => {
-    setShowMenu(!showMenu)
-  }
-
+    setShowMenu(!showMenu);
+  };
 
   const handleChangeAnalyses = ({ field, value }) => {
     if (!value) {
@@ -60,20 +64,20 @@ const UserAccountLayout = () => {
     setSearchParams(searchParams, { replace: true });
   };
 
-  const data = JSON.parse(localStorage.getItem('user2'));
-  const isDoctor = data?.user?.is_doctor
+  const data = JSON.parse(localStorage.getItem("user2"));
+  const isDoctor = data?.user?.is_doctor;
 
   return (
     <div className="userAccount">
       <div className="accountHeader">
-       <span className="menuIcon" onClick={() => toggleMenu()}>
-       <MdMenu />
-       </span>
+        <span className="menuIcon" onClick={() => toggleMenu()}>
+          {showMenu ? <MdMenu /> : <IoMdClose />}
+        </span>
       </div>
       <div className="intoAccount">
         <div className="leftSide">
           <div>
-            <h3>{user2?.user?.full_name}</h3>
+            <h3 style={{color:"#231781"}}>{user2?.user?.full_name}</h3>
             <div className="idBox">
               <span>#{user2?.user?.user_id}</span>
               <div className="iconBox">
@@ -110,8 +114,8 @@ const UserAccountLayout = () => {
               </div>
             </div>
             <div className="leftSideLine"></div>
-            <h4>Analizlər</h4>
-            <MainAnalaysesBox/>
+            <h4 style={{color:"#231781"}}>Analizlər</h4>
+            <MainAnalaysesBox />
           </div>
           <div className="exitBox" onClick={() => exitUserAccount()}>
             <svg
@@ -136,9 +140,13 @@ const UserAccountLayout = () => {
             <span className="exitText">Çıxış</span>
           </div>
         </div>
-        <div className="leftSideActive" style={{display:`${showMenu ? "none" : "block"}`}}>
+        {showMenu ? "" : <div className="backShadow"></div>}
+        <div
+          className="leftSideActive"
+          style={{ display: `${showMenu ? "none" : "block"}` }}
+        >
           <div>
-            <h3>{user2?.user?.full_name}</h3>
+            <h3 style={{color:"#231781"}}>{user2?.user?.full_name}</h3>
             <div className="idBox">
               <span>#{user2?.user?.user_id}</span>
               <div className="iconBox">
@@ -175,8 +183,8 @@ const UserAccountLayout = () => {
               </div>
             </div>
             <div className="leftSideLine"></div>
-            <h4>Analizlər</h4>
-            <MainAnalaysesBox/>
+            <h4 style={{color:"#231781"}}>Analizlər</h4>
+            <MainAnalaysesBox />
           </div>
           <div className="exitBox" onClick={() => exitUserAccount()}>
             <svg
@@ -202,7 +210,7 @@ const UserAccountLayout = () => {
           </div>
         </div>
         <div className="rightSide">
-        <div className="rightHeader">
+          <div className="rightHeader">
             {location.pathname === "/userAccount/addAnalysis" ? (
               <Link style={{ textDecoration: "none" }} className="mb-4" to="">
                 <button className="addanalyseBtn">Geri</button>
@@ -210,11 +218,12 @@ const UserAccountLayout = () => {
             ) : (
               <h5>Analiz nəticələri </h5>
             )}
-            {isDoctor === 1 && location.pathname !== "/userAccount/addAnalysis" && (
-              <Link to="addAnalysis">
-                <button className="addanalyseBtn">Əlavə et</button>
-              </Link>
-            )}
+            {isDoctor === 1 &&
+              location.pathname !== "/userAccount/addAnalysis" && (
+                <Link to="addAnalysis">
+                  <button className="addanalyseBtn">Əlavə et</button>
+                </Link>
+              )}
           </div>
           <Outlet />
         </div>

@@ -8,7 +8,7 @@ import { useSearchParams } from "react-router-dom";
 const MainRightSide = () => {
   const [loding, setLoading] = useState(false);
   const [posts, setPosts] = useState([]);
-  const [searchParams] = useSearchParams();
+  const [searchParams,setSearchParams] = useSearchParams();
  
 
   let category = searchParams.get('category') || '';
@@ -19,10 +19,15 @@ const MainRightSide = () => {
       setLoading(true);
       const res = await api.get(`analyses?category=${category}&page=${page}`);
       setPosts(res?.data);
+      if(res.data?.last_page<page){
+        searchParams.delete("page")
+        setSearchParams(searchParams,{replace:true})
+      }
       setLoading(false);
     };
 
     fetchPosts();
+    //eslint-disable-next-line
   }, [category,page]);
 
 
