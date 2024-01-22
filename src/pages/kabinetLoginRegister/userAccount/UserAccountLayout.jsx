@@ -77,7 +77,7 @@ const UserAccountLayout = () => {
       <div className="intoAccount">
         <div className="leftSide">
           <div>
-            <h3 style={{color:"#231781"}}>{user2?.user?.full_name}</h3>
+            <h3>{user2?.user?.full_name}</h3>
             <div className="idBox">
               <span>#{user2?.user?.user_id}</span>
               <div className="iconBox">
@@ -114,7 +114,7 @@ const UserAccountLayout = () => {
               </div>
             </div>
             <div className="leftSideLine"></div>
-            <h4 style={{color:"#231781"}}>Analizlər</h4>
+            <h4>Analizlər</h4>
             <MainAnalaysesBox />
           </div>
           <div className="exitBox" onClick={() => exitUserAccount()}>

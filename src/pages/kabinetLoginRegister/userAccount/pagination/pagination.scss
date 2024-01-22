@@ -1,6 +1,68 @@
-.paginationConatiner{
-    z-index: 1;
-    .active-page{
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+.paginationConatiner {
+  z-index: 1;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+  padding: 8px 16px;
+  background-color: white;
+  border-radius: 12px;
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    span {
+      font-size: 14px;
+      color: #231781;
+      color: #231781;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      cursor: pointer;
     }
+
+    button {
+      border: none;
+      border-radius: 5px;
+      padding: 6px 12px;
+      background-color: white;
+      color: #231781;
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+    }
+  }
+  .activePage {
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: 1750px) {
+  .paginationConatiner {
+    padding: 12px 22px;
+    border-radius: 15px;
+    .pagination {
+      gap: 20px;
+
+      span {
+        font-size: 16px;
+        color: #231781;
+        color: #231781;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      button {
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        background-color: white;
+        color: #231781;
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        font-size: 20px;
+      }
+    }
+    .activePage {
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+  }
 }

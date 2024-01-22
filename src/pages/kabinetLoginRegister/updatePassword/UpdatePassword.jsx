@@ -31,7 +31,7 @@ const UpdatePassword = () => {
     <div className="mainRegister">
       <div className="headerBox"></div>
       <div className="register">
-        <div className="intoRegister">
+        <div className="intoRegister forWidth">
           <h3>Şifrəni yenilə</h3>
           <p className="updatedText"> E-mail adresi qeyd edin,təsdiqləmə kodu göndəriləcək</p>
           <form onSubmit={handleSubmit}>

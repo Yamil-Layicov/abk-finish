@@ -14,7 +14,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      .intoRegister {
+      .intoRegisterUserModal {
         width: calc(430px);
         background-color: white;
         border-radius: 16px;
@@ -36,10 +36,17 @@
         form {  
           display: flex;
           flex-direction: column;
-          gap: 25px;
+          gap: 15px;
   
           .inputBox {
             position: relative;
+            label{
+              color: #a8a8a8;
+              font-family: "Inter", sans-serif;
+              font-size: 14px;
+              font-weight: 500;
+              padding-bottom: 3px;
+            }
             input {
               padding: 10px;
               outline: none;
@@ -75,7 +82,7 @@
             background: #10d0a1;
             color: #fff;
             font-family: "Inter", sans-serif;
-            font-size: 18px;
+            font-size: 16px;
             font-weight: 600;
             padding: 12px 0;
             margin-top: 20px;
@@ -123,7 +130,7 @@
         justify-content: center;
         align-items: normal;
         width: 100%;
-        .intoRegister {
+        .intoRegisterUserModal {
           border-radius: 0;
           padding: 16px;
           width: 100%;
@@ -157,20 +164,23 @@
         height: 70px;
       }
       .register {
-        .intoRegister {
+        .intoRegisterUserModal {
           border-radius: 0;
-          padding: 0 120px;
-          width: 970px;
+          padding: 60px 80px;
+          width: 900px;
           border-radius: 16px;
           h3 {
             font-size: 32px;
             font-weight: 500;
             line-height: normal;
-            padding: 50px 0;
+            padding-bottom: 20px;
           }
           form {
-            gap: 40px;
+            gap: 25px;
             .inputBox {
+              label{
+                font-size: 24px;
+              }
               input {
                 padding: 22px;
                 border-radius: 16px;

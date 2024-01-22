@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Data from "../data/Data";
 import Pagination from "../pagination/Pagination";
 import { useSearchParams } from "react-router-dom";
+import { ProgressBar } from "react-loader-spinner";
 
 
 const MainRightSide = () => {
@@ -32,18 +33,29 @@ const MainRightSide = () => {
 
 
  if(loding){
-  return <div>Loding...</div>
+  return <div style={{position:"absolute",top:"50%", left:"50%", transform:"translate(-50%, -50%)"}}>
+    <ProgressBar
+  height="80"
+  width="80"
+  ariaLabel="progress-bar-loading"
+  wrapperStyle={{}}
+  wrapperClass="progress-bar-wrapper"
+  borderColor="white"
+  barColor="#51E5FF"
+/>
+  </div>
  }
 
   return (
     <div style={{display:'flex', flexDirection:"column", alignItems:"center", width:"100%", gap:"20px"}}>
       <Data posts={posts?.data}/>
-      <Pagination
+      {posts?.total > posts?.per_page && <Pagination
         postsPerPage={posts?.per_page}
         totalPosts={posts?.total}
         current_page={posts?.current_page}
         last_page={posts?.last_page}
-      />
+      />}
+      
     </div>
   );
 };

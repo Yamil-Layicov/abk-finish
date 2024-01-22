@@ -12,8 +12,8 @@ import { useAuth2 } from "../../../../context/AuthContext2";
 const basicSchema = yup.object().shape({
   current_password: yup
     .string()
-    .min(6, "şifrə ən azı 6 simvoldan ibarət olmalıdır")
-    .required("şifrə qeyd olunmalıdır"),
+    .min(6, "cari şifrə ən azı 6 simvoldan ibarət olmalıdır")
+    .required("cari şifrə qeyd olunmalıdır"),
   password: yup
     .string()
     .min(6, "şifrə ən azı 6 simvoldan ibarət olmalıdır")
@@ -76,7 +76,7 @@ const EditPasswordModal = ({ showModal2, closeModal2 }) => {
       onClick={closeModal2}
     >
       <div className="register">
-        <div className="intoRegister" onClick={(e) => e.stopPropagation()}>
+        <div className="intoRegisterUserModal" onClick={(e) => e.stopPropagation()}>
         <span className="closeBtn" onClick={() => closeModal2()}>
             <svg
               width="24"

@@ -74,7 +74,7 @@ const NewPassword = () => {
     <div className="mainRegister">
       <div className="headerBox"></div>
       <div className="register">
-        <div className="intoRegister">
+        <div className="intoRegister forWidth">
           <h3>Yeni şifrə təyin et</h3>
           <p className="updatedText">
             Yeni şifrənizi təyin edin

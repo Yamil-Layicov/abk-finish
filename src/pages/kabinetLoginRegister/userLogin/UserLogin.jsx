@@ -43,16 +43,14 @@ const UserLogin = () => {
     setShowPassword((prevShowPassword) => !prevShowPassword);
   };
 
-  const onSubmit = async (values, actions) => {
+  const onSubmit = async (values) => {
     try {
       const response = await api.post("login", values)
       setUser2(response?.data)
       if(response){
         navigate("/userAccount");
+        window.location.reload();
       }
-      // const accessToken = response?.data?.token;
-      // const roles = response?.data?.is_admin;
-      // setAuth({values, accessToken, roles});
     } catch (error) {
         if(error.response?.status === 401){
           toast.error("E-poçt və ya parol səhvdir")

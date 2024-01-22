@@ -15,10 +15,10 @@
         
       }
       .secondSpan {
-        padding-left: 145px;
+        padding-left: 150px;
       }
       .thirdSpan{
-        padding-left: 135px;
+        padding-left: 140px;
       }
     }
     .bodyMainBox {
@@ -179,5 +179,62 @@
           }
         }
       }
+    }
+  }
+
+  @media(min-width: 1750px){
+    .insideRightSide {
+      padding: 40px 30px;
+      .headerBox {
+        padding-bottom: 20px;
+        span {
+          font-size: 20px;
+        }
+        .secondSpan {
+          padding-left: 165px;
+        }
+        .thirdSpan{
+          padding-left: 125px;
+        }
+      }
+      .bodyMainBox {
+        .bodyBox {
+          padding-top: 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 30px;
+          .dateText {
+            span {
+              font-size: 20px;
+            }
+            .date {
+              font-size: 20px;
+            }
+            .text {
+              padding-left: 102px;
+              color: #231781;
+              font-weight: 600;
+              display: inline-block;
+              width: 300px;
+  
+            }
+            .text2 {
+              color: #231781;
+              font-weight: 600;
+            }
+          }
+          .buttons{
+            gap: 20px;
+            a, button {
+              padding: 13px  31px;
+              font-size: 20px;
+            }
+          }
+          
+        }
+      }
+  
+      
     }
   }

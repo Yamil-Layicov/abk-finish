@@ -80,7 +80,7 @@ const EditUserModal = ({ showModal, closeModal }) => {
       onClick={closeModal}
     >
       <div className="register">
-        <div className="intoRegister" onClick={(e) => e.stopPropagation()}>
+        <div className="intoRegisterUserModal" onClick={(e) => e.stopPropagation()}>
           <span className="closeBtn" onClick={() => closeModal()}>
             <svg
               width="24"
@@ -101,6 +101,7 @@ const EditUserModal = ({ showModal, closeModal }) => {
           <h3>Profili redaktə et</h3>
           <form noValidate ref={form} onSubmit={handleSubmit}>
             <div className="inputBox">
+              <label htmlFor="">Ad və soyadınız</label>
               <input
                 type="text"
                 id="full_name"
@@ -117,6 +118,7 @@ const EditUserModal = ({ showModal, closeModal }) => {
               )}
             </div>
             <div className="inputBox">
+              <label htmlFor="">Qurum adı</label>
               <input
                 type="text"
                 id="company"
@@ -133,6 +135,7 @@ const EditUserModal = ({ showModal, closeModal }) => {
               )}
             </div>
             <div className="inputBox">
+              <label htmlFor="">E-mail</label>
               <input
                 type="email"
                 id="email"
@@ -145,6 +148,7 @@ const EditUserModal = ({ showModal, closeModal }) => {
               {errors.email && touched.email && <small>{errors.email}</small>}
             </div>
             <div className="inputBox">
+              <label htmlFor="">Nömrə</label>
               <input
                 type="text"
                 id="number"
