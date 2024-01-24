@@ -88,7 +88,7 @@ const AddAnalysis = () => {
 
   
   return (
-    <div className="addAnalysis">
+    <div className="addAnalysisBox">
       <div className="intoSettings">
         {showModal && <CategoryModal setShowModal={setShowModal} />}
         {showModalEdit && (
@@ -109,7 +109,7 @@ const AddAnalysis = () => {
                   <th>ANALİZ NÖVÜ</th>
                   <th>Y.TARIXI</th>
                   <th>D.TARIXI</th>
-                  <th style={{ width: "100px" }}>Parametrlər</th>
+                  <th style={{ width: "150px" }}>Parametrlər</th>
                 </tr>
               </thead>
               <tbody>

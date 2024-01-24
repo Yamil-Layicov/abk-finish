@@ -1,7 +1,7 @@
 import { useSearchParams } from 'react-router-dom';
 import api from '../../../../admin/api/posts';
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState, useLayoutEffect } from 'react';
+import { useState, useLayoutEffect } from 'react';
 
 const MainAnalysesBox = () => {
   const [searchParams, setSearchParams] = useSearchParams();

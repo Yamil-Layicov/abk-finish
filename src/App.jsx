@@ -13,7 +13,6 @@ const App = () => {
     window.scroll({ top: 0 });
     document.querySelector("html").style.scrollBehavior = "";
   }, [location.pathname]);
-
   return (
     <>
       {useRoutes(routes)}
@@ -30,6 +29,7 @@ const App = () => {
         theme="light"
       />
       {/* <CheckFilter /> */}
+  
     </>
   );
 };

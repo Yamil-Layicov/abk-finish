@@ -1,4 +1,4 @@
-.addAnalysis {
+.addAnalysisBox {
   font-family: "Poppins", sans-serif;
   padding-bottom: 100px;
 
@@ -68,11 +68,15 @@
           width: 100%;
           background-color: white;
 
+          th {
+            font-weight: 600;
+          }
           td,
           th {
             border: 1px solid #dddddd;
             text-align: left;
             padding: 12px;
+            font-family: "Poppins", sans-serif;
           }
 
           button {
@@ -117,23 +121,29 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
-      input,
-      textarea,
-      select {
-        border: none;
-        outline: none;
-        border: 1px solid rgba(184, 184, 184, 0.575);
-        border-radius: 3px;
-        padding: 12px 12px;
-        font-size: 15px;
-        font-family: "Poppins", sans-serif;
-        resize: vertical;
-      }
 
       .div {
         display: flex;
         flex-direction: column;
         gap: 6px;
+
+        label{
+          font-family: "Poppins", sans-serif;
+            font-weight: 500;
+        }
+
+        input,
+        textarea,
+        select {
+          border: none;
+          outline: none;
+          border: 1px solid rgba(184, 184, 184, 0.575);
+          border-radius: 3px;
+          padding: 12px 12px;
+          font-size: 15px;
+          font-family: "Poppins", sans-serif;
+          resize: vertical;
+        }
       }
 
       .imageFile {
@@ -174,12 +184,139 @@
           border: 2px solid transparent;
           background-color: #10d0a1;
           color: white;
-          transition: all .3s ease-in-out;
+          transition: all 0.3s ease-in-out;
 
           &:hover {
             border: 2px solid #10d0a1;
             color: black;
             background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+@media (min-width: 1750px) {
+  .addAnalysisBox {
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 100px;
+
+    hr {
+      margin-top: 90px;
+    }
+
+    h4 {
+      font-size: 25px;
+      padding: 0px 0 10px 0;
+      color: #0d5aa7;
+    }
+    .intoSettings {
+      .categoryContent {
+        .createNewBtn {
+          padding-bottom: 27px;
+          button {
+            padding: 13px 31px;
+            font-size: 20px;
+            border-radius: 5px;
+          }
+        }
+
+        .table {
+          table {
+            td,
+            th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 12px;
+              font-size: 20px;
+            }
+
+            button {
+              padding: 10px 12px;
+              font-size: 22px;
+              margin: 0 7px;
+            }
+          }
+        }
+      }
+
+      form {
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .div {
+          gap: 16px;
+
+          label{
+            font-size: 22px;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+          }
+
+          input,
+          textarea,
+          select {
+            border: none;
+            outline: none;
+            border: 1px solid rgba(184, 184, 184, 0.575);
+            border-radius: 3px;
+            padding: 12px 12px;
+            font-size: 20px;
+            font-family: "Poppins", sans-serif;
+          }
+        }
+
+        .imageFile {
+          .logoBox {
+            label {
+              cursor: pointer;
+              .logo {
+                font-size: 30px;
+                gap: 10px;
+
+                .text {
+                  font-size: 22px;
+                  font-weight: bold;
+                }
+              }
+            }
+            img {
+              width: 100px;
+              height: 100px;
+              border-radius: 5px;
+              object-fit: cover;
+            }
+            input {
+              display: none;
+            }
+          }
+        }
+
+        .buttons {
+          display: flex;
+          gap: 10px;
+
+          button {
+            padding: 13px 31px;
+            font-size: 20px;
+            margin: 0 3px;
+            border: 2px solid transparent;
+            background-color: #10d0a1;
+            color: white;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+              border: 2px solid #10d0a1;
+              color: black;
+              background-color: transparent;
+            }
           }
         }
       }
