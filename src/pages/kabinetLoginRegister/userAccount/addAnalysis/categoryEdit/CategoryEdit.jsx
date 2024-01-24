@@ -23,7 +23,6 @@ const CategoryEdit = ({ setShowModalEdit, categoryId }) => {
     },
     {
       onSuccess: () => {
-        // toast.success('Redaktə olundu');
         window.location.reload();
         setShowModalEdit(false);
       },
@@ -43,12 +42,12 @@ const CategoryEdit = ({ setShowModalEdit, categoryId }) => {
     <div className="modal">
       <div className="modalInto" style={{position:"relative"}}>
         <form onSubmit={handleSubmit}>
-          <h2 style={{ color: "black" }}>Redaktə et</h2>
+          <h2>Redaktə et</h2>
           <label>Analizin növü</label>
           <input type="text" onChange={(e) => setName(e.target.value)} value={name || ""} />
           <button type="submit">Yadda saxla</button>
         </form>
-        <span onClick={() => setShowModalEdit(false)} style={{ color: "black", position:"absolute", top:"10px", right:"10px", cursor:"pointer" }}>X</span>
+        <span className='closeModalBtn' onClick={() => setShowModalEdit(false)}>X</span>
       </div>
     </div>
   );

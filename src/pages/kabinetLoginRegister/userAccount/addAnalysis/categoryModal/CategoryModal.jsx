@@ -40,12 +40,12 @@ const CategoryModal = ({ setShowModal}) => {
     <div className="modal">
       <div className="modalInto" style={{position:"relative"}}>
         <form  onSubmit={handleSubmit}>
-          <h2 style={{ color: "black" }}>Yenisini yarat</h2>
+          <h2>Yenisini yarat</h2>
           <label>Analizin növü</label>
           <input type="text" onChange={(e) => setName(e.target.value)} value={name || ""} />
           <button type="submit">Yadda saxla</button>
         </form>
-        <span onClick={() => setShowModal(false)} style={{ color: "black", position:"absolute", top:"10px", right:"10px", cursor:"pointer" }}>X</span>
+        <span className='closeModalBtn' onClick={() => setShowModal(false)} >X</span>
       </div>
     </div>
   );
