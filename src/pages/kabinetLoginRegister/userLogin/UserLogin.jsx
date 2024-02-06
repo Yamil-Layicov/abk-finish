@@ -73,6 +73,16 @@ const UserLogin = () => {
     values,
   } = formik;
 
+  let pathName = window.location.pathname;
+
+  window.addEventListener('popstate', function(e) {
+   if(pathName == "/account"){
+    console.log("asd");
+   }else{
+    console.log("pomidor");
+   }
+  });
+  
 
   return (
     <div className="mainRegister">
@@ -158,3 +168,5 @@ const UserLogin = () => {
 };
 
 export default UserLogin;
+
+

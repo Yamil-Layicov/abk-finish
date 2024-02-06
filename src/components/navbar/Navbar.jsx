@@ -70,7 +70,7 @@ const Navbar = () => {
     setIsOpenNavbar(false);
   };
   const navigate7 = () => {
-    navigate("userAccount");
+    navigate("account");
     setIsOpenNavbar(false);
   };
 
@@ -147,7 +147,7 @@ const Navbar = () => {
                 <BlurOnOutlinedIcon />
               </span>
               <span className="text">
-                <span onClick={() => navigate("/userAccount")}>ŞƏXSİ KABİNET</span>
+                <span onClick={() => navigate("/account")}>ŞƏXSİ KABİNET</span>
               </span>
             </div>
           </div>

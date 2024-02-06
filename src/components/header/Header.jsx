@@ -60,7 +60,7 @@ const Header = () => {
               <BlurOnOutlinedIcon />
             </span>
             <span className="text">
-            <span onClick={() => navigate("/userAccount")}>ŞƏXSİ KABİNET</span>
+            <span onClick={() => navigate("/account")}>ŞƏXSİ KABİNET</span>
             </span>
           </div>
         </div>
