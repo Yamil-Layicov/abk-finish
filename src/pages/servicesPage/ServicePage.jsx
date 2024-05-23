@@ -54,7 +54,7 @@ const ServicePage = () => {
         <div className="img">
           <img src={bgImg} alt="" />
         </div>
-        <h1>XIDMƏTLƏR</h1>
+        <h1>XİDMƏTLƏR</h1>
       </div>
       <div className="centerSection">
         <div className="textHeader">
