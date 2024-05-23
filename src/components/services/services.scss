@@ -1,7 +1,7 @@
 .services {
   background-image: url("../../assets/servicesBg.png");
   background-color: #f2f5fa;
-  padding: 140px 140px;
+  padding: 140px 40px;
   font-family: "Archivo", sans-serif;
   .galleryHeader {
     h1 {
@@ -229,6 +229,20 @@
     .galleryHeader {
       h1 {
         font-size: 35px !important;
+      }
+    }
+  }
+}
+
+@media(min-width:1500px){
+  .services{
+    .gallerySlider{
+      .carousel{
+        .inner-carousel{
+          .item{
+            min-width: 420px;
+          }
+        }
       }
     }
   }
