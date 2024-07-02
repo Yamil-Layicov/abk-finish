@@ -13,6 +13,8 @@ const Login = () => {
     password: "",
   });
 
+  const [error, setError] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({ ...prevData, [name]: value }));
@@ -20,55 +22,52 @@ const Login = () => {
 
   const loginUser = async () => {
     try {
-      const response = await axios.post("https://api.nane.az/api/login",formData);
-         setUser(response.data.token);
-         navigate("/admin");
-     } catch (error) {
-      console.log(error);
+      const response = await axios.post("https://api.nane.az/api/login", formData);
+      setUser(response.data.token);
+      navigate("/admin");
+    } catch (error) {
+      alert("Giriş uğursuz oldu. E-poçt və parolunuzu yoxlayın");
     }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const {email, password} = formData
+    const { email, password } = formData;
 
     if (!email || !password) {
-      alert("bos qoyma");
+      setError("Giriş uğursuz oldu. E-poçt və parolunuzu yoxlayın");
+      return;
     }
-    else if (
-      formData.email !== "jafaraghamaliyev@gmail.com" ||
-      formData.password !== "cefer123"
-    ){
-      alert("email veya parol sehvdir")
-    }
-    if (
-      formData.email === "jafaraghamaliyev@gmail.com" &&
-      formData.password === "cefer123"
-    ) {
-      loginUser();
-    }
+
+    setError("");
+    loginUser();
   };
 
   return (
     <div className="loginPage">
       <form onSubmit={handleSubmit}>
         <h3>Admin Panel</h3>
-        <label>E-poçt</label>
+        {error && <div className="error">{error}</div>}
+        <label htmlFor="email">E-poçt</label>
         <input
-          type="text"
+          type="email"
           name="email"
           placeholder="e-poçt"
-          id="username"
+          id="email"
+          value={formData.email}
           onChange={handleChange}
+          required
         />
-        <label>Parol</label>
+        <label htmlFor="password">Parol</label>
         <input
           type="password"
           name="password"
           placeholder="parol"
           id="password"
+          value={formData.password}
           onChange={handleChange}
+          required
         />
         <button type="submit">Daxil ol</button>
       </form>

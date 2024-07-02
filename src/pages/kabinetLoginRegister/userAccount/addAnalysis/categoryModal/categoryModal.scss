@@ -64,53 +64,53 @@
     }
   }
 
-  @media (min-width: 1750px) {
-    .modal {
-      .modalInto {
-        background-color: white;
-        border-radius: 5px;
-        padding: 40px;
-        width: 600px;
-        height: 340px;
-        h2{
-          font-size: 35px;
-        }
+  // @media (min-width: 1750px) {
+  //   .modal {
+  //     .modalInto {
+  //       background-color: white;
+  //       border-radius: 5px;
+  //       padding: 40px;
+  //       width: 600px;
+  //       height: 340px;
+  //       h2{
+  //         font-size: 35px;
+  //       }
     
-        form {
-          gap: 15px;
+  //       form {
+  //         gap: 15px;
     
-          label {
-            font-size: 24px;
-          }
-          input {
-            border: none;
-            outline: none;
-            border: 1px solid rgba(184, 184, 184, 0.575);
-            border-radius: 3px;
-            padding: 13px 20px;
-            font-size: 22px;
-          }
+  //         label {
+  //           font-size: 24px;
+  //         }
+  //         input {
+  //           border: none;
+  //           outline: none;
+  //           border: 1px solid rgba(184, 184, 184, 0.575);
+  //           border-radius: 3px;
+  //           padding: 13px 20px;
+  //           font-size: 22px;
+  //         }
     
-          button {
-            padding: 13px 31px;
-            font-size: 20px;
-            margin: 0 6px;
-            border: 2px solid white;
-            width: 180px;
-            margin: auto;
-            border-radius: 4px;
-            background-color: #32CD32;
-            color: white;
-            cursor: pointer;
-          }
-        }
+  //         button {
+  //           padding: 13px 31px;
+  //           font-size: 20px;
+  //           margin: 0 6px;
+  //           border: 2px solid white;
+  //           width: 180px;
+  //           margin: auto;
+  //           border-radius: 4px;
+  //           background-color: #32CD32;
+  //           color: white;
+  //           cursor: pointer;
+  //         }
+  //       }
 
-        .closeModalBtn{
-          top: 15px;
-        right: 15px;
-          font-size: 25px;
-        }
-      }
-    }
+  //       .closeModalBtn{
+  //         top: 15px;
+  //       right: 15px;
+  //         font-size: 25px;
+  //       }
+  //     }
+  //   }
   
-  }
+  // }

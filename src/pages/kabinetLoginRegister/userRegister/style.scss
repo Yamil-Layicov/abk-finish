@@ -202,118 +202,118 @@
     }
   }
 
-  @media (min-width: 1750px) {
-    .headerBox {
-      height: 70px;
-    }
-    .register {
-      .intoRegister {
-        border-radius: 0;
-        padding: 0 120px;
-        width: 970px;
-        border-radius: 16px;
-        h3 {
-          font-size: 32px;
-          font-weight: 500;
-          line-height: normal;
-          padding: 50px 0;
-        }
-        form {
-          gap: 40px;
-          .inputBox {
-            input {
-              padding: 22px;
-              border-radius: 16px;
-              font-size: 32px;
-            }
-            small {
-              bottom: -30px;
-              left: 5px;
-              font-size: 22px;
-            }
-            .inputEyes {
-              top: 20px;
-              right: 35px;
-              font-size: 35px;
-            }
-          }
-          button {
-            font-size: 32px;
-            padding: 22px 0;
-          }
-          .otherBtns {
-            margin-bottom: 60px;
-          }
-          .forgotBox {
-            .saveBox {
-              gap: 25px;
-              .checkMark {
-                width: 32px;
-                height: 32px;
-                border-radius: 10px;
-                box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  // @media (min-width: 1750px) {
+  //   .headerBox {
+  //     height: 70px;
+  //   }
+  //   .register {
+  //     .intoRegister {
+  //       border-radius: 0;
+  //       padding: 0 120px;
+  //       width: 970px;
+  //       border-radius: 16px;
+  //       h3 {
+  //         font-size: 32px;
+  //         font-weight: 500;
+  //         line-height: normal;
+  //         padding: 50px 0;
+  //       }
+  //       form {
+  //         gap: 40px;
+  //         .inputBox {
+  //           input {
+  //             padding: 22px;
+  //             border-radius: 16px;
+  //             font-size: 32px;
+  //           }
+  //           small {
+  //             bottom: -30px;
+  //             left: 5px;
+  //             font-size: 22px;
+  //           }
+  //           .inputEyes {
+  //             top: 20px;
+  //             right: 35px;
+  //             font-size: 35px;
+  //           }
+  //         }
+  //         button {
+  //           font-size: 32px;
+  //           padding: 22px 0;
+  //         }
+  //         .otherBtns {
+  //           margin-bottom: 60px;
+  //         }
+  //         .forgotBox {
+  //           .saveBox {
+  //             gap: 25px;
+  //             .checkMark {
+  //               width: 32px;
+  //               height: 32px;
+  //               border-radius: 10px;
+  //               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
-                svg {
-                  width: 22px;
-                  height: 22px;
-                }
-              }
-              .textSave {
-                font-size: 30px;
-              }
-            }
-            .text {
-              font-size: 24px;
-            }
-          }
-          .verificBtns {
-            .box {
-              width: 90px;
-              height: 100px;
-              font-size: 22px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+  //               svg {
+  //                 width: 22px;
+  //                 height: 22px;
+  //               }
+  //             }
+  //             .textSave {
+  //               font-size: 30px;
+  //             }
+  //           }
+  //           .text {
+  //             font-size: 24px;
+  //           }
+  //         }
+  //         .verificBtns {
+  //           .box {
+  //             width: 90px;
+  //             height: 100px;
+  //             font-size: 22px;
+  //             display: flex;
+  //             justify-content: center;
+  //             align-items: center;
 
-              input {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-              }
-            }
+  //             input {
+  //               display: flex;
+  //               justify-content: center;
+  //               align-items: center;
+  //             }
+  //           }
             
             
-          }
-        }
-        .accaountText {
-          font-size: 32px;
-          padding: 50px 0;
-          span {
-            color: #356fc6;
-            padding-left: 10px;
-            transition: all 0.3s ease-in-out;
-            cursor: pointer;
-          }
-        }
-        .updatedText {
-          font-size: 24px;
-        }
-      }
-      .forWidth {
-        width: 750px;
-        padding: 20px 60px;
+  //         }
+  //       }
+  //       .accaountText {
+  //         font-size: 32px;
+  //         padding: 50px 0;
+  //         span {
+  //           color: #356fc6;
+  //           padding-left: 10px;
+  //           transition: all 0.3s ease-in-out;
+  //           cursor: pointer;
+  //         }
+  //       }
+  //       .updatedText {
+  //         font-size: 24px;
+  //       }
+  //     }
+  //     .forWidth {
+  //       width: 750px;
+  //       padding: 20px 60px;
 
-        .resendBox{
-          display: flex;
-          justify-content: space-between;
-          .resendCode {
-            color: #356fc6;
-            font-family: "Inter", sans-serif;
-            font-size: 24px;
-            font-weight: 500;
-          }
-        }
-      }
-    }
-  }
+  //       .resendBox{
+  //         display: flex;
+  //         justify-content: space-between;
+  //         .resendCode {
+  //           color: #356fc6;
+  //           font-family: "Inter", sans-serif;
+  //           font-size: 24px;
+  //           font-weight: 500;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 }

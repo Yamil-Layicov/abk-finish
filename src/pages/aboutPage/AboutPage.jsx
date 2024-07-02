@@ -37,11 +37,11 @@ const AboutPage = () => {
         <div className="imgContainer">
           <div className="imgOne">
             <img src={aboutData.image_1} alt="" />
-            <div className="experinceBox">
+            {/* <div className="experinceBox">
               <span>3</span>
               <span style={{ paddingLeft: "12%" }}>İllik</span>
               <span style={{ paddingLeft: "10%" }}>Təcrübə</span>
-            </div>
+            </div> */}
           </div>
           <div>
             <div className="imgTwo">

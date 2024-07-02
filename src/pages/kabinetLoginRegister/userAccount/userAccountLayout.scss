@@ -318,78 +318,78 @@
     }
   }
 
-  @media(min-width: 1750px){
-    .leftSide {
-      width: 300px !important;
-      h3 {
-        font-size: 32px !important;
-      }
-      .idBox {
-        span {
-          &:first-child {
-          }
-        }
-        .iconBox {
+  // @media(min-width: 1750px){
+  //   .leftSide {
+  //     width: 300px !important;
+  //     h3 {
+  //       font-size: 32px !important;
+  //     }
+  //     .idBox {
+  //       span {
+  //         &:first-child {
+  //         }
+  //       }
+  //       .iconBox {
 
-          span {
-          }
-        }
-      }
-      h4{
-        font-size: 24px !important;
-      }
-      .analysisBox {
-        .analsisName {
-          ul {
-            li {
-              padding-top: 15px !important;
-              font-size: 20px !important;
-            }
-          }
-          .checkMark {
-            width: 28px !important;
-            height: 28px !important;
+  //         span {
+  //         }
+  //       }
+  //     }
+  //     h4{
+  //       font-size: 24px !important;
+  //     }
+  //     .analysisBox {
+  //       .analsisName {
+  //         ul {
+  //           li {
+  //             padding-top: 15px !important;
+  //             font-size: 20px !important;
+  //           }
+  //         }
+  //         .checkMark {
+  //           width: 28px !important;
+  //           height: 28px !important;
 
-            svg {
-              width: 20px !important;
-              height: 20px !important;
-            }
-          }
-        }
-      }
-      .exitBox {
-        width: 120px !important;
+  //           svg {
+  //             width: 20px !important;
+  //             height: 20px !important;
+  //           }
+  //         }
+  //       }
+  //     }
+  //     .exitBox {
+  //       width: 120px !important;
 
-        &:hover {
-          .svg {
-          }
-        }
-        .svg {
-          width: 36px !important;
-          height: 36px !important;
-        }
-        .exitText {
-          font-size: 20px !important;
-        }
-      }
-    }
-    .rightSide {
-      background: #f4f4fa;
-      padding: 30px 50px;
-      overflow-y: auto;
-      width: calc(100% - 300px) !important;
+  //       &:hover {
+  //         .svg {
+  //         }
+  //       }
+  //       .svg {
+  //         width: 36px !important;
+  //         height: 36px !important;
+  //       }
+  //       .exitText {
+  //         font-size: 20px !important;
+  //       }
+  //     }
+  //   }
+  //   .rightSide {
+  //     background: #f4f4fa;
+  //     padding: 30px 50px;
+  //     overflow-y: auto;
+  //     width: calc(100% - 300px) !important;
 
-      .rightHeader {
-        padding-bottom: 10px;
+  //     .rightHeader {
+  //       padding-bottom: 10px;
 
-        .addanalyseBtn {
-          padding: 13px 25px !important;
-          font-size: 20px !important;
-        }
-      }
-      h5 {
-        font-size: 24px !important;
-      }
-    }
-  }
+  //       .addanalyseBtn {
+  //         padding: 13px 25px !important;
+  //         font-size: 20px !important;
+  //       }
+  //     }
+  //     h5 {
+  //       font-size: 24px !important;
+  //     }
+  //   }
+  // }
 }

@@ -13,13 +13,6 @@ import img9 from "./imgs/Ulduz-Seferli.jpg";
 
 const images = [
   {
-    id: 1,
-    title: img8,
-    h3: "DR.Üftadə Güner",
-    h6: "Laboratoriya müdiri",
-  },
-
-  {
     id: 2,
     title: img2,
     h3: "Aysun Babayeva",
