@@ -1,112 +1,3 @@
-// import "./bloqEdit.scss";
-// import { useEffect, useState } from "react";
-// import api from "../../../api/posts";
-// import { useParams, useNavigate } from "react-router-dom";
-
-
-// const BloqEdit = () => {
-//   const [title, setTitle] = useState([]);
-//   const [content, setContent] = useState([]);
-
-//   const [image, setImage] = useState(null);
-//   const [previousImage, setPreviousImage] = useState(null);
-
-//   const {id} = useParams();
-//   const navigate = useNavigate()
-
-//   useEffect(() => {
-//     const fetchSettings = async () => {
-//       try {
-//         const response = await api.get(`blogs/${id}`);
-
-//         setContent(response.data.content);
-//         setTitle(response.data.title);
-//         setImage(response.data.image);
-//       } catch (error) {
-//         console.error(error);
-//       }
-//     };
-
-//     fetchSettings();
-//   }, []);
-
-//   const handleImage = (e) => {
-//     const file = e.target.files[0];
-//     setImage(file);
-
-//     if (file) {
-//       const reader = new FileReader();
-
-//       reader.onload = (e) => {
-//         setPreviousImage(e.target.result);
-//       };
-
-//       reader.readAsDataURL(file);
-//     } else {
-//       setPreviousImage(null);
-//     }
-//   };
-
-//   const handleUpload = async (e) => {
-//     e.preventDefault();
-
-//     try {
-//       const formData = new FormData();
-//       formData.append("content", content);
-//       formData.append("title", title);
-
-//       formData.append("image", image);
-
-//       const response = await api.post(`blogs/${id}`, formData);
-
-//       if(response) return navigate(-1)
-
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-
-
-//   return (
-//     <div className="bloqEdit">
-//       <h4>Bloq Redaktə et</h4>
-//       <div className="intoSettings">
-//         <form onSubmit={handleUpload}>
-//           <div>
-//             <label>Başlıq *</label>
-//             <input
-//               type="text"
-//               value={title || ""}
-//               onChange={(e) => setTitle(e.target.value)}
-//             />
-//           </div>
-//           <div>
-//             <label>Məzmun *</label>
-//             <textarea
-//               cols="30"
-//               rows="7"
-//               value={content || ""}
-//               onChange={(e) => setContent(e.target.value)}
-//             ></textarea>
-//           </div>
-//           <div className="imageFile">
-//             <div className="inputBox">
-//               <label>Kiçik şəkil</label>
-//               <img style={{objectFit:"cover"}} src={previousImage || image} alt="" />
-//               <input type="file" accept="image/*"  onChange={handleImage} />
-//             </div>
-//           </div>
-//           <button type="submit">Yadda saxla</button>
-//           <button type="submit" onClick={() => navigate("/admin/bloq")}>Geri Qayıt</button>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BloqEdit;
-
-
 import "./bloqEdit.scss";
 import { useEffect, useState } from "react";
 import api from "../../../api/posts";
@@ -116,10 +7,9 @@ import { toast } from "react-toastify";
 import { useQuery } from "@tanstack/react-query";
 
 const BloqEdit = () => {
-  const [title, setTitle] = useState([]);
-  const [content, setContent] = useState([]);
-  const [category, setCategory] = useState();
-
+  const [title, setTitle] = useState("");
+  const [content, setContent] = useState("");
+  const [category, setCategory] = useState("");
   const [image, setImage] = useState(null);
   const [previousImage, setPreviousImage] = useState(null);
 
@@ -130,32 +20,17 @@ const BloqEdit = () => {
     const fetchSettings = async () => {
       try {
         const response = await api.get(`blogs/${id}`);
-
-        setContent(response.data.content);
         setTitle(response.data.title);
-        setImage(response.data.image);
+        setContent(response.data.content);
         setCategory(response.data.category.id);
+        setPreviousImage(response.data.image);
       } catch (error) {
-        console.error(error);
+        console.error("Failed to fetch blog details:", error);
       }
     };
 
     fetchSettings();
-  }, []);
-
-  // useEffect(() => {
-  //   const fetchSettings = async () => {
-  //     try {
-  //       const response = await api.get(`categories/${id}`);
-  //       setCategory(response?.data?.name)
-
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchSettings();
-  // }, []);
+  }, [id]); 
 
   const handleImage = (e) => {
     const file = e.target.files[0];
@@ -163,11 +38,7 @@ const BloqEdit = () => {
 
     if (file) {
       const reader = new FileReader();
-
-      reader.onload = (e) => {
-        setPreviousImage(e.target.result);
-      };
-
+      reader.onload = (e) => setPreviousImage(e.target.result); 
       reader.readAsDataURL(file);
     } else {
       setPreviousImage(null);
@@ -179,21 +50,27 @@ const BloqEdit = () => {
 
     try {
       const formData = new FormData();
-      formData.append("content", content);
       formData.append("title", title);
-      formData.append("category_id", category)
+      formData.append("content", content);
+      formData.append("category_id", category);
 
-      formData.append("image", image);
+      if (image) {
+        formData.append("image", image);
+      }
 
-      const response = await api.post(`blogs/${id}`, formData);
+
+      const response = await api.post(`blogs/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
       if (response) {
         toast.success("Redaktə olundu");
         navigate(-1);
       }
     } catch (error) {
-      toast.error("xeta bas verdi");
-      console.log(error);
+      toast.error("Xəta baş verdi");
     }
   };
 
@@ -207,22 +84,20 @@ const BloqEdit = () => {
       <h4>Redaktə et</h4>
       <div className="intoSettings">
         <form onSubmit={handleUpload}>
-        <div className="div">
+          <div className="div">
             <label>Kategoriyalar *</label>
             <select
               value={category || ""}
               onChange={(e) => setCategory(e.target.value)}
+              required
             >
               <option value="" disabled>
                 Kategoriya seçin
               </option>
+              {isLoading && <option>Yüklənir...</option>}
               {data &&
                 data?.data?.map((category) => (
-                  <option
-                    style={{ color: "black" }}
-                    key={category?.id}
-                    value={category?.id}
-                  >
+                  <option key={category?.id} value={category?.id}>
                     {category?.name}
                   </option>
                 ))}
@@ -235,6 +110,7 @@ const BloqEdit = () => {
               rows="2"
               value={title || ""}
               onChange={(e) => setTitle(e.target.value)}
+              required
             ></textarea>
           </div>
           <div className="div">
@@ -244,6 +120,7 @@ const BloqEdit = () => {
               rows="7"
               value={content || ""}
               onChange={(e) => setContent(e.target.value)}
+              required
             ></textarea>
           </div>
           <div className="imageFile div">
@@ -251,11 +128,11 @@ const BloqEdit = () => {
               <label htmlFor="logo">
                 <div className="logo">
                   <span>
-                    <FiUploadCloud />{" "}
+                    <FiUploadCloud />
                   </span>
                   <span className="text">Şəkil</span>
                 </div>
-                <img src={previousImage || image} alt="" />
+                {previousImage && <img src={previousImage} alt="Preview" />}
               </label>
               <input
                 id="logo"
@@ -268,7 +145,7 @@ const BloqEdit = () => {
           </div>
           <div className="buttons">
             <button type="submit">Yadda saxla</button>
-            <button type="submit" onClick={() => navigate("/admin/bloq")}>
+            <button type="button" onClick={() => navigate("/admin/bloq")}>
               Geri Qayıt
             </button>
           </div>

@@ -2,6 +2,7 @@ import "./bloqEdit.scss";
 import { useEffect, useState } from "react";
 import api from "../../../api/posts";
 import { useParams, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify"; 
 
 
 const ServiceEdit = () => {
@@ -58,14 +59,23 @@ const ServiceEdit = () => {
       formData.append("title", title);
       formData.append("color", color);
 
-      formData.append("image", image);
+      if (image) {
+        formData.append("image", image);
+      }
 
-      const response = await api.post(`services/${id}`, formData);
+      const response = await api.post(`services/${id}`, formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      });
 
-      if(response) return navigate(-1)
+      if (response) {
+        toast.success("Redaktə olundu");
+        navigate(-1);
+      }
 
     } catch (error) {
-      console.log(error);
+      toast.error("Xəta baş verdi");
     }
   };
 
