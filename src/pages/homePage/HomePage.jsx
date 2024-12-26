@@ -16,7 +16,7 @@ const HomePage = () => {
       <About/>
       <Gallery/>
       <WhyChooseUs/>
-      <Team/>
+      {/* <Team/> */}
       <Feedback/>
     </main>
   );
