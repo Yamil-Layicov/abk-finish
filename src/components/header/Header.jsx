@@ -41,7 +41,7 @@ const Header = () => {
   return (
     <div className="header">
       <div className="left">
-        <h6>Agro Bitki Klinikasına xoşgəlmisiniz</h6>
+        <h6>Agro Bitki Klinikasına Xoş Gəlmisiniz</h6>
         <h1>SAĞLAM TƏBİƏT SAĞLAM GƏLƏCƏK</h1>
         <p>
           Ən son texnoloji avadanlıqlarla təmin olunmuş tam lisenziyalı və
