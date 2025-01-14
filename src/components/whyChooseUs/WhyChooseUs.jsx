@@ -28,7 +28,7 @@ const WhyChooseUs = () => {
             </span>
           </div>
           <h3>Sürətli İş Prosesi</h3>
-          <p>İş prosesini vaxtında yekunlaşdırımaq bizim üçün önəmlidir.</p>
+          <p>İş prosesini vaxtında yekunlaşdırmaq bizim üçün önəmlidir.</p>
         </div>
         <div className="box">
           <div className="labIcon">

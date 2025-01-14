@@ -6,21 +6,21 @@ const images = [
     {
       id: 1,
       title:
-        "Məhsullarımız ixrac olunduğu üçün analizlərin aparılması vacibdir. Agro Bitki Klinikası böyük həcmli sifarişlərin öhdəsindən operativ və keyfiyyətli gələn bir laboratoriya olaraq bizim etimadımızı qazanmış bir komandadır. Bu cür keyifiyyətli iş üçün komandaya təşəkkürlərimizi bildiririk.",
+        "Toxumların keyfiyyətindən əmin olmaq üçün Aqro Bitki Klinikasında analizlər aparılır. Göstərdiyiniz sürətli və peşəkar xidmətə görə Sizə dərin minnətdarlığımızı bildiririk. Əməkdaşlığımızın daha da möhkəmlənməsi ümidi ilə Sizə uğurlar arzu edirik.",
         h3:"Həsən Əliyev ",
         h6:"Binə Agro"
     },
     {
       id: 2,
       title:
-        "Toxumların keyfiyyətindən əmin olmaq üçün Agro Bitki Klinikasında analizlər aparılır. Göstərdiyiniz sürətli və peşəkar xidmətə görə Sizə dərin minnətdarlığımızı bildiririk. Əməkdaşlığmızın daha da möhkəmlənmasinə ümüdü ilə Sizə uğurlar arzu edirik.",
+        "Məhsullarımız ixrac olunduğu üçün analizlərin aparılması vacibdir. Aqro Bitki Klinikası böyük həcmli sifarişlərin öhdəsindən operativ və keyfiyyətli gələn bir laboratoriya olaraq bizim etimadımızı qazanmış bir komandadır. Bu cür keyfiyyətli iş üçün komandaya təşəkkürlərimizi bildiririk.",
         h3:"Xəqani Məmmədov  ",
         h6:"Toxumçuluq və Tingçilik"
     },
     {
       id: 3,
       title:
-        "Meyvə bağlarımıza nə qədər qulluq etsək də, istənilən nəticə əldə edə bilmirdik. Agro Bitki Klinikasının mütəxəssisləri tərəfindən keçirilən monitprinqlər, edilən analizlər və məsləhətlərin köməyi ilə artıq bol məhsul əldə edirik",
+        "Meyvə bağlarımıza nə qədər qulluq etsək də istənilən nəticə əldə edə bilmirdik. Aqro Bitki Klinikasının mütəxəssisləri tərəfindən keçirilən monitorinqlər, edilən analizlər və məsləhətlərin köməyi ilə artıq bol məhsul əldə edirik.",
         h3:"Tural Hacıyev",
         h6:"Fermer"
     },

@@ -1,21 +1,20 @@
 import "./footer.scss";
-import {BiLogoTelegram} from 'react-icons/bi'
+import { BiLogoTelegram } from "react-icons/bi";
 import { useEffect, useState } from "react";
-import api from '../../admin/api/posts';
-import {useNavigate} from 'react-router-dom';
-import fb from '../../assets/socials/fb.svg';
-import insta from '../../assets/socials/insta.svg';
+import api from "../../admin/api/posts";
+import { useNavigate } from "react-router-dom";
+import fb from "../../assets/socials/fb.svg";
+import insta from "../../assets/socials/insta.svg";
 
 const Footer = () => {
-
-  const [navData, setNavData] = useState([])
+  const [navData, setNavData] = useState([]);
 
   useEffect(() => {
     const fetchSettings = async () => {
       try {
         const response = await api.get("settings");
         console.log(response.data);
-        setNavData(response.data)
+        setNavData(response.data);
       } catch (error) {
         console.error(error);
       }
@@ -23,8 +22,6 @@ const Footer = () => {
 
     fetchSettings();
   }, []);
-
-
 
   const navigate = useNavigate();
 
@@ -50,7 +47,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="boxes">
-        <div className="firstBox" style={{position:"relative"}}>
+        <div className="firstBox" style={{ position: "relative" }}>
           {/* <img
           onClick={navigate1}
           style={{backgroundColor:"", width:"150px", position:"absolute", top:"-70px", left:"0"}}
@@ -58,25 +55,34 @@ const Footer = () => {
             alt=""
           /> */}
           <p>
-          Agro Bitki Klinikasi olaraq, bizim missiyamız ölkənin iqtisadiyyatında prioritet sayılan kənd təsərrüfat sahələrinin daimi tərəqqisini təmin etmək, həmçinin, ən son texnoloji avadanlıqların və mütəxəssisilərin köməyi ilə bitki, su və qida məhsullarını analiz etməklə sağlam gələcəyə nail olmaqdır.
-
+            Aqro Bitki Klinikası olaraq, bizim missiyamız ölkənin
+            iqtisadiyyatında prioritet sayılan kənd təsərrüfatı sahələrinin
+            tərəqqisini təmin etmək, həmçinin ən son texnoloji avadanlıqların və
+            mütəxəssislərin köməyi ilə bitki, su və qida məhsullarını analiz
+            etməklə sağlam gələcəyə nail olmaqdır.
           </p>
           <div className="socials">
-            <a href={navData.facebook} rel="noreferrer" target="_blank"><img src={fb}  alt="" /></a> 
-            <a href={navData?.instagram} rel="noreferrer" target="_blank" ><img src={insta}  alt="" /></a>
+            <a href={navData.facebook} rel="noreferrer" target="_blank">
+              <img src={fb} alt="" />
+            </a>
+            <a href={navData?.instagram} rel="noreferrer" target="_blank">
+              <img src={insta} alt="" />
+            </a>
           </div>
         </div>
         <div className="secondBox">
-          <h4 >Faydalı bağlantılar</h4>
+          <h4>Faydalı bağlantılar</h4>
           <p onClick={navigate4}>Haqqımızda</p>
           <p onClick={navigate2}>Xidmətlər</p>
           <p onClick={navigate3}>Bloq</p>
           <p onClick={navigate6}>FAQ</p>
-          <p onClick={navigate5}>Əlaqə</p> 
+          <p onClick={navigate5}>Əlaqə</p>
         </div>
         <div className="thirdBox">
           <h4>Əlaqə məlumatı</h4>
-          <p>Bakı şəhər, Nərimanov rayonu, <br /> Ələsgər Qayıbov 12 22</p>
+          <p>
+            Bakı şəhər, Nərimanov rayonu, <br /> Ələsgər Qayıbov 12/22
+          </p>
           <p>{navData?.home_phone}</p>
           <p>{navData?.email}</p>
         </div>
@@ -84,14 +90,14 @@ const Footer = () => {
           <h4>Yeni xəbərlər üçün Abunə olun </h4>
           <div className="inputMsg">
             <input type="text" placeholder="E-Poçt daxil edin " />
-            <div className="sendBox"><BiLogoTelegram/></div>
+            <div className="sendBox">
+              <BiLogoTelegram />
+            </div>
           </div>
         </div>
       </div>
       <div className="copyright">
-        <span>
-          © Copyright {navData?.rights}
-        </span>
+        <span>© Copyright {navData?.rights}</span>
         <div className="right">
           {/* <span>Terms and conditions</span>
           <span>Privacy policy</span>

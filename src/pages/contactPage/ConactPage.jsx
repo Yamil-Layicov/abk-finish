@@ -68,7 +68,7 @@ const ContactPage = () => {
   return (
     <div className="contactPage">
       <HelmetMeta title="Eleqe" content="Bakı şəhər, Nərimanov rayonu,
-Ələsgər Qayıbov 12 22"/>
+Ələsgər Qayıbov 12/22"/>
       <div className="hedaerSection">
         <div className="img">
           <img src={bgImg} alt="" />
@@ -84,7 +84,7 @@ const ContactPage = () => {
             <h3>Məkan</h3>
             <p>
               Bakı şəhər, Nərimanov rayonu, <br />
-              Ələsgər Qayıbov 12 22
+              Ələsgər Qayıbov 12/22
             </p>
           </div>
           <div className="box">
