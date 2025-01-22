@@ -12,30 +12,30 @@ import img8 from "./imgs/Uftade-Guner.jpg";
 import img9 from "./imgs/Ulduz-Seferli.jpg";
 
 const images = [
-  {
-    id: 2,
-    title: img2,
-    h3: "Aysun Babayeva",
-    h6: "N/Q-mütəxəssis",
-  },
-  {
-    id: 3,
-    title: img3,
-    h3: "İlahə Salmanova",
-    h6: "Virusoloq",
-  },
-  {
-    id: 4,
-    title: img4,
-    h3: "Jalə Hüseynova",
-    h6: "Laborant",
-  },
-  {
-    id: 5,
-    title: img5,
-    h3: "Sara Fərzəliyeva",
-    h6: "Fitohelmintor",
-  },
+  // {
+  //   id: 2,
+  //   title: img2,
+  //   h3: "Aysun Babayeva",
+  //   h6: "N/Q-mütəxəssis",
+  // },
+  // {
+  //   id: 3,
+  //   title: img3,
+  //   h3: "İlahə Salmanova",
+  //   h6: "Virusoloq",
+  // },
+  // {
+  //   id: 4,
+  //   title: img4,
+  //   h3: "Jalə Hüseynova",
+  //   h6: "Laborant",
+  // },
+  // {
+  //   id: 5,
+  //   title: img5,
+  //   h3: "Sara Fərzəliyeva",
+  //   h6: "Fitohelmintor",
+  // },
   {
     id: 6,
     title: img6,
